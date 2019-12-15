@@ -1,0 +1,21 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include 'includes/navbar.html' %}
+{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{% static 'css/hzscroller.css' %}">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-xs-10 offset-xs-1">
+            {% load crispy_forms_tags %}
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-success btn-block" type="submit">Kaydet</button>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}

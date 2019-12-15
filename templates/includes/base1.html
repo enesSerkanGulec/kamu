@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap4.3.1/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap4.3.1/Font-Awesome-fa-4/css/font-awesome.min.css' %}">
+    <title>{% block title  %}İsrafsız Kamu{% endblock %}</title>
+</head>
+<body>
+{% block navbar %}{% endblock %}
+{% block body %} {% endblock %}
+<script src="{% static 'js/jquery3.4.1.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'bootstrap4.3.1/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

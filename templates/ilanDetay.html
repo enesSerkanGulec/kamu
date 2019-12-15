@@ -1,0 +1,99 @@
+{% extends 'includes/base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% load crispy_forms_tags %}
+<link rel="stylesheet" href="{% static 'css/hzscroller.css' %}">
+{% block navbar %}
+    {% include 'includes/navbar.html' with islem='ilanlarım' %}
+{% endblock %}
+{% block body %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container my-4 py-3">
+    {#            <div class="form-row text-center">{% include 'includes/messages.html' %}</div>#}
+            <div class="row">
+                <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+                    <div class="row d-block">{% include 'includes/messages.html' %}</div>
+                    <div class="form-row">
+                        <div class="col" style="width: 100px">
+                            <a href="" class="card-link" data-toggle="modal" data-target="#resimekleme"
+                               title="Resim Ekle">
+                                <span class="fa fa-image" style="font-size: 100px"></span>
+{#                                <img src="{% static 'img/add-image-100.png' %}" >#}
+                            </a>
+
+{#                            # MODAL burada idi#}
+
+
+                        </div>
+
+                        <div class="col-md-auto col-lg-auto">
+                            <div class="container" >
+                                <div class="row text-center" >
+                                    {% for resim in resimler %}
+                                        <div class="col-xs-4 m-1 p-1 alert-success" >
+                                            <img href="{{ resim.resim.url }}" src="{{ resim.resim.url }}"
+                                                 width="100" height="100" >
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row d-block">
+                        {{ form.kategori|as_crispy_field }}
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-9 col-lg-9">
+                            {{ form.ad|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-3 col-lg-3">
+                            {{ form.adet|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-9 col-lg-9 d-block">
+                        {{ form.aciklama|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-3 col-lg-3 py-3 pt-4 pb-3">
+{#                                <form type="submit" enctype="multipart/form-data">#}
+{#                                    {% csrf_token %}#}
+                                <button class="btn-block btn-lg btn-success rounded" style="width: 100%;height: 100%"
+                                        type="submit" name="btn" value="kaydet">
+                                    Kaydet ve ilanlarıma geri dön
+                                </button>
+{#                                </form>#}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade text-left" id="resimekleme" tabindex="-1" role="dialog"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Resim Ekle </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            {{ form.resim }}
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                                                <button type="submit" class="btn btn-success"  name="btn" value="resim">Resmi Ekle</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+    </form>
+
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<ul class="nav justify-content-end h6">
+  <li class="nav-item">
+    <a class="nav-link {% if islem == 1 %}font-weight-bold {% endif %} " href="{% url 'karsilamaislemi' 1 %}">Giriş</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if islem == 2 %}font-weight-bold {% endif %}" href="{% url 'karsilamaislemi' 2 %}">Kayıt</a>
+  </li>
+{#  <li class="nav-item">#}
+{#    <a class="nav-link {% if islem == 3 %}font-weight-bold {% endif %}" href="{% url 'karsilamaislemi' 3 %}">Şifremi Unuttum</a>#}
+{#  </li>#}
+</ul>

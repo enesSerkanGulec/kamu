@@ -1,0 +1,80 @@
+{% load static %}
+        <div class="card m-2 p-2"  style="width: 15rem; height: 25rem; background-color: {% if f.yayinda %}white{% else %}lightgrey{% endif %}">
+            <div class="container align-content-center"> {% include 'includes/slide.html' with resimler=f.resimler ilan_id=f.id %}</div>
+
+            <div class="card-body" style="background-color: w">
+            <br>
+                <h6>{{ f.ad }}</h6>
+{#                <h6 class="card-subtitle mb-2 text-muted">{% if f.kategori != None %} {{ f.kategori }} {% else %} <br> {% endif %}</h6>#}
+                <p class="card-text" style="font-size: small">{{ f.adet }} adet</p>
+
+                <div class="card-footer text-center" style="bottom: 0;left: 0; position: absolute; width: 100%; font-size: x-large">
+
+
+                    <a href="{% url 'ilandetayislemi' f.id %}" class="card-link" title="Düzenle">
+                        <span class="fa fa-edit" style="color: black"></span></a>
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#silmesorgusu{{ f.id }}" title="Sil">
+                        <span class="fa fa-trash-o" style="color: black"></span>
+                    </a>
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#yayinlamasorgusu{{ f.id }}" title="{% if f.yayinda %}Yayından kaldır{% else %}Yayınla{% endif %}">
+                        <span class="fa {% if f.yayinda %}fa-lock{% else %}fa-unlock{% endif %}" style="color: black"></span>
+                    </a>
+                    <a {% if f.mesajAdet > 0 %} href=""  {% endif %} class="card-link" title="İlan mesajları">
+                        <span class="fa fa-envelope-o" style="color: black"></span>
+                        {% if f.mesajAdet > 0 %} <sup> <span class="badge badge-light" style="font-size: x-small">{{ f.mesajAdet }}</span></sup> {% endif %}
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+                    <div class="modal fade text-left" id="yayinlamasorgusu{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">İlan sorgusu </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    {% if f.kategori != None %} {{ f.kategori }} kategorisindeki{% endif %}<br>
+                                    <span style="font-weight: bold">{{ f.ad }} </span>ilanı {% if f.yayinda %}yayından kaldırılacak{% else %}yayına alınacak{% endif %}
+                                    <br> <br> Devam edilsin mi?
+                                </div>
+                                <div class="modal-footer">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                                        <button type="submit" class="btn btn-{% if f.yayinda %}warning{% else %}success{% endif %}"  name="ilan" value="yayinla;{{ f.id }}">{% if f.yayinda %}Yayından kaldır{% else %}Yayınla{% endif %}</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade text-left" id="silmesorgusu{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Dikkat!! İlan silinecek!!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    {% if f.kategori != None %} {{ f.kategori }} kategorisindeki{% endif %}<br>
+                                    <span style="font-weight: bold">{{ f.ad }} </span>ilanı silinecek !!
+                                    <br> <br> Devam edilsin mi?
+                                </div>
+                                <div class="modal-footer">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                                        <button type="submit" class="btn btn-danger"  name="ilan" value="sil;{{ f.id }}">Sil</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+

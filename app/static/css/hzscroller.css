@@ -1,0 +1,26 @@
+/*.scrolling-wrapper-flexbox {*/
+/*  display: flex;*/
+/*  flex-wrap: nowrap;*/
+/*  overflow-x: auto;*/
+
+/*  .card {*/
+/*    flex: 0 0 auto;*/
+/*  }*/
+/*}*/
+
+
+/* The heart of the matter */
+.testimonial-group > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.testimonial-group > .row > .col-xs-4 {
+  display: inline-block;
+  float: none;
+}
+
+/* Decorations */
+.col-xs-4 { color: #fff; font-size: 48px; padding-bottom: 20px; padding-top: 18px; }
+.col-xs-4:nth-child(3n+1) { background: #c69; }
+.col-xs-4:nth-child(3n+2) { background: #9c6; }
+.col-xs-4:nth-child(3n+3) { background: #69c; }

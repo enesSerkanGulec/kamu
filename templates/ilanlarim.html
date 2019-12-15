@@ -1,0 +1,14 @@
+{% extends 'includes/base.html' %}
+{% block navbar %}
+    {% include 'includes/navbar.html' with islem='ilanlarım' %}
+{% endblock %}
+{% block body %}
+
+    <div class="row d-block w-100 text-center">{% include 'includes/messages.html' %}</div>
+    <div class="row">
+        {% for f in form %}
+            {% include 'includes/malzemeKarti.html' with f=f %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

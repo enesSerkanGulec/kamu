@@ -1,0 +1,35 @@
+{% load static %}
+{% load thumbnail %}
+{% load index %}
+{% if resimler %}
+    <div id="carouselExampleIndicators{{ ilan_id }}" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          {% for resim in resimler %}
+            <li data-target="#carouselExampleIndicators{{ ilan_id }}" data-slide-to="{{ forloop.counter0}}" {% if forloop.counter0 == 0 %}class="active"{% endif %}></li>
+          {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+          {% for resim in resimler %}
+            <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif%}">
+{#              <img src="..." class="d-block w-100">#}
+                {% thumbnail resim.resim "200x200" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="d-block w-100">
+                {% endthumbnail %}
+            </div>
+          {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators{{ ilan_id }}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators{{ ilan_id }}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+{% else %}
+{#    {% thumbnail static 'img/resim-yok.png' "250x250" as im %}#}
+{#        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="d-block w-100">#}
+{#    {% endthumbnail %}#}
+    <img src="{% static 'img/resim-yok.png' %}" alt="">
+{% endif %}

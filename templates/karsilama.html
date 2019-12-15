@@ -1,0 +1,62 @@
+{% extends 'includes/base1.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block body %}
+    <div class="container-fluid my-lg-2">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-8">
+                <div class="container align-content-center d-none d-md-block d-lg-block">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="{% static 'img/welcome_resimleri/20191203-PuffinSharing_ROW2232970320_1366x768.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="{% static 'img/welcome_resimleri/20191205-CanadaTreeFarm_ROW2445133102_1366x768.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="{% static 'img/welcome_resimleri/20191201-HalleyVI_ROW2017180783_1366x768.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-4">
+                {% include 'includes/navbar_small.html' with islem=islem %}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            {% include 'includes/messages.html' %}
+                        </div>
+                    </div>
+                    <hr>
+
+                    <h5 style="font-weight: bold"> {% if islem == 1 %}Giriş Yap{% elif islem == 2 %}Kaydol{% else %}Şifre Gönder{% endif %}</h5>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form|crispy }}
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="button" value={{ islem }}>
+                            {% if islem == 1 %}Giriş{% elif islem == 2 %}Kaydol{% else %}Şifre Gönder{% endif %}
+                        </button>
+                        {% if islem == 1 or islem == 2 %}
+                            <small> <a href="{% url 'karsilamaislemi' 3 %}">Şifrenizi mi unuttunuz?</a> </small>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
