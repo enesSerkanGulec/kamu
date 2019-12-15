@@ -3,6 +3,7 @@ from app.models import *
 from app.models import User as userrr
 
 
+
 class KayitFormu(forms.ModelForm):
 
     def clean_email(self):
@@ -93,8 +94,17 @@ class İlanFormu(forms.ModelForm):
             return self.cleaned_data['adet']
 
 
-class resimliİlanFormu(İlanFormu):
+class resimlerSinifi:
     resim = forms.ImageField(required=False)
+    id = -1
+
+    def kaydet(self, hangiİlan):
+        r = Resim(resim=self.resim, ilan=hangiİlan)
+        r.save()
+
+
+class resimliİlanFormu(İlanFormu):
+    # resim = forms.ImageField(required=False)
 
     class Meta(İlanFormu.Meta):
         fields = İlanFormu.Meta.fields + ['resim', ]
