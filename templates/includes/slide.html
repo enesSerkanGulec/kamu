@@ -1,6 +1,5 @@
 {% load static %}
-{% load thumbnail %}
-{% load index %}
+{#{% load index %}#}
 {% if resimler %}
     <div id="carouselExampleIndicators{{ ilan_id }}" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -11,10 +10,8 @@
       <div class="carousel-inner">
           {% for resim in resimler %}
             <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif%}">
-{#              <img src="..." class="d-block w-100">#}
-                {% thumbnail resim.resim "200x200" as im %}
-                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="d-block w-100">
-                {% endthumbnail %}
+                <img src="{{ resim.resim.url }}" width="200" height="200" class="d-block w-100 img-fluid">
+{#                {{ resim.image_tag}}#}
             </div>
           {% endfor %}
       </div>
@@ -28,8 +25,5 @@
       </a>
     </div>
 {% else %}
-{#    {% thumbnail static 'img/resim-yok.png' "250x250" as im %}#}
-{#        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="d-block w-100">#}
-{#    {% endthumbnail %}#}
-    <img src="{% static 'img/resim-yok.png' %}" alt="">
+    <span class="fa fa-image" style="font-size: 180px"></span>
 {% endif %}

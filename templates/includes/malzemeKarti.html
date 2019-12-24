@@ -2,7 +2,7 @@
         <div class="card m-2 p-2"  style="width: 15rem; height: 25rem; background-color: {% if f.yayinda %}white{% else %}lightgrey{% endif %}">
             <div class="container align-content-center"> {% include 'includes/slide.html' with resimler=f.resimler ilan_id=f.id %}</div>
 
-            <div class="card-body" style="background-color: w">
+            <div class="card-body" >
             <br>
                 <h6>{{ f.ad }}</h6>
 {#                <h6 class="card-subtitle mb-2 text-muted">{% if f.kategori != None %} {{ f.kategori }} {% else %} <br> {% endif %}</h6>#}
@@ -19,10 +19,12 @@
                     <a href="#" class="card-link" data-toggle="modal" data-target="#yayinlamasorgusu{{ f.id }}" title="{% if f.yayinda %}Yayından kaldır{% else %}Yayınla{% endif %}">
                         <span class="fa {% if f.yayinda %}fa-lock{% else %}fa-unlock{% endif %}" style="color: black"></span>
                     </a>
-                    <a {% if f.mesajAdet > 0 %} href=""  {% endif %} class="card-link" title="İlan mesajları">
-                        <span class="fa fa-envelope-o" style="color: black"></span>
-                        {% if f.mesajAdet > 0 %} <sup> <span class="badge badge-light" style="font-size: x-small">{{ f.mesajAdet }}</span></sup> {% endif %}
-                    </a>
+                    {% if f.mesajAdet > 0 %}
+                        <a  href=""   class="card-link" title="İlan mesajları">
+                            <span class="fa fa-envelope-o" style="color: black"></span>
+                            {% if f.okunmayanMesajAdet > 0 %} <sup> <span class="badge badge-light" style="font-size: x-small;color: red">{{ f.okunmayanMesajAdet }}</span></sup> {% endif %}
+                        </a>
+                    {% endif %}
 
                 </div>
 

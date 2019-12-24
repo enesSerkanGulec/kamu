@@ -57,6 +57,10 @@ class User(AbstractUser):
     REQUIRED_FIELDS = []
     objects = UserManager()
 
+    def geciciResimlerimiTemizle(self):
+        for x in self.ilanlarım():
+            x.geciciResimleriTemizle()
+
     def ilanlarım(self):
         return ilan.objects.filter(sahip=self)
 
@@ -91,6 +95,7 @@ class ilan(models.Model):
     adet = models.IntegerField(verbose_name='Adet', default=1, null=True)
     aciklama = models.TextField(verbose_name='Açıklama', blank=True)
     yayinda = models.BooleanField(verbose_name='Yayında', default=True)
+    tarih = models.DateField(auto_now=True, null=False, blank=False)
 
     def __str__(self):
         return str(self.kategori) + ' - ' + str(self.ad)
@@ -98,17 +103,56 @@ class ilan(models.Model):
     def resimler(self):
         return Resim.objects.filter(ilan=self)
 
-    def mesajlar(self):
-        return Mesajlar.objects.filter(ilan=self)
+    def geciciResimleriTemizle(self):
+        GeciciResim.objects.filter(ilan=self).delete()
 
-    def mesajAdet(self):
-        return Mesajlar.objects.filter(ilan=self).count()
+    def geciciResimleriDoldur(self):
+        for x in self.resimler():
+            self.geciciResimEkle(resim=x.resim, kayitliMi=True)
+            # _geciciResim = GeciciResim(ilan=self, resim=x.resim)
+            # _geciciResim.save()
+
+    def geciciResimleriGetir(self):
+        # self.geciciResimleriDoldur()
+        return GeciciResim.objects.filter(ilan=self, silinecek=False)
+
+    def geciciResimleriKaydet(self):
+        _gr = GeciciResim.objects.filter(ilan=self)
+        for x in _gr:
+            if not x.kayitli and not x.silinecek:
+                self.resimekle(resim=x.resim)
+            if x.kayitli and x.silinecek:
+                Resim.objects.get(ilan=self, resim=x.resim).delete()
+            #x.delete()
+
+    def geciciResimEkle(self, resim, kayitliMi=False):
+        try:
+            x = GeciciResim.objects.get(ilan=self, resim=resim)
+        except:
+            _ = GeciciResim(ilan=self, resim=resim, kayitli=kayitliMi)
+            _.save()
+            return ""
+        else:
+            if x.silinecek:
+                x.silinecek = False
+                return ""
+            else:
+                return "Bu resim zaten mevcut"
 
     def resimekle(self, resim):
         yeniresim = Resim()
         yeniresim.ilan = self
         yeniresim.resim = resim
         yeniresim.save()
+
+    def mesajlar(self):
+        return Mesajlar.objects.filter(ilan=self)
+
+    def mesajAdet(self):
+        return Mesajlar.objects.filter(ilan=self).count()
+
+    def okunmayanMesajAdet(self):
+        return Mesajlar.objects.filter(ilan=self, okundu=False).count()
 
 
 class Resim(models.Model):
@@ -120,6 +164,16 @@ class Resim(models.Model):
 
     def __str__(self):
         return self.resim.name
+
+
+class GeciciResim(models.Model):
+    ilan = models.ForeignKey('ilan', on_delete=models.CASCADE, null=True)
+    resim = models.ImageField(verbose_name='Resim', null=True)
+    kayitli = models.BooleanField(default=True)
+    silinecek = models.BooleanField(default=False)
+
+    def sil(self):
+        self.silinecek = True
 
 
 class KayitBekleyenler(models.Model):
@@ -140,11 +194,11 @@ yon_secimi = [('gelen', 'gelen'), ('giden', 'giden')]
 
 
 class Mesajlar(models.Model):
-    # sahip = models.ForeignKey('User', null=False, blank=False, on_delete=models.CASCADE)
     ilan = models.ForeignKey('ilan', null=False, blank=False, on_delete=models.CASCADE)
     yon = models.CharField(max_length=5, null=False, blank=False, choices=yon_secimi, default='gelen')
     mesaj_metni = models.TextField(blank=False, default='')
     tarih = models.DateTimeField(auto_now_add=True)
+    okundu = models.BooleanField(default=False)
 
     def kurum(self):
         return self.sahip.kurum
@@ -156,3 +210,6 @@ class Mesajlar(models.Model):
 class favoriler(models.Model):
     sahip = models.ForeignKey('User', null=False, blank=False, on_delete=models.CASCADE)
     ilan = models.ForeignKey('ilan', null=False, blank=False, on_delete=models.CASCADE)
+
+
+

@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     #Benim uygulamalarım
     'app',
     #3. parti uygulamalar
-    'django_cleanup',
+    # 'django_cleanup',
     'crispy_forms',
-    'sorl.thumbnail',
+    # 'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STARICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ] #sunucu tarafında iptal
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ] #sunucu tarafında iptal
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') # sunucu tarafında aktif edilecek ('python manage.py collectstatic' yapılacak)
 
 AUTH_USER_MODEL = 'app.User'

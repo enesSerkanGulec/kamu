@@ -94,27 +94,65 @@ class İlanFormu(forms.ModelForm):
             return self.cleaned_data['adet']
 
 
-class resimlerSinifi:
-    resim = forms.ImageField(required=False)
-    id = -1
-
-    def kaydet(self, hangiİlan):
-        r = Resim(resim=self.resim, ilan=hangiİlan)
-        r.save()
-
-
+# Son çalışan hali
 class resimliİlanFormu(İlanFormu):
-    # resim = forms.ImageField(required=False)
+    resim = forms.ImageField(required=False)
 
     class Meta(İlanFormu.Meta):
         fields = İlanFormu.Meta.fields + ['resim', ]
 
-    def __init__(self):
-        self.resimler = []
-        # burada resimID ve resim bilgisini içeren bir class oluşturulup bu class türünde bir liste oluşturulacak ve
-        # ilanın resimleri buna yüklenecek
-        # eğer resim veritabanında ise id si gelecek yok yeni eklendi ise id -1 olup kaydetme esnasında
-        # bu id si -1 olanlar veritabanına eklenecek
+
+class resimFormu(forms.Form):
+    resim = forms.ImageField(required=False)
+
+    class Meta:
+        fields = ['resim', ]
+
+
+class geciciResimFormu(forms.ModelForm):
+
+    class Meta:
+        model = GeciciResim
+        widgets = {
+            'resim': forms.ImageField(),
+        }
+        fields = ['resim', ]
+
+
+# class resimSinifi(forms.Form):
+#     resim = forms.ImageField(required=False)
+#
+#     class Meta:
+#         fields = ['resim', ]
+#
+#     def kaydet(self):
+#         self.hangiilan.resimekle(resim=self.resim)
+#
+#     def __init__(self,hangiilan):
+#         self.hangiilan=hangiilan
+#         self.required = False
+#
+# class resimlerSinifi:
+#     resimler = []
+#     hangiilan = -1
+
+
+# class resimliİlanFormu(İlanFormu,resimlerSinifi):
+#         resim = forms.ImageField(required=False)
+#
+#         class Meta(İlanFormu.Meta):
+#             fields = İlanFormu.Meta.fields + ['resim', ]
+#
+#     def ilanResimleri(self):
+#         r=İlanFormu.
+#
+#     def __init__(self):
+#         pass
+#         self.resimler = []
+#         # burada resimID ve resim bilgisini içeren bir class oluşturulup bu class türünde bir liste oluşturulacak ve
+#         # ilanın resimleri buna yüklenecek
+#         # eğer resim veritabanında ise id si gelecek yok yeni eklendi ise id -1 olup kaydetme esnasında
+#         # bu id si -1 olanlar veritabanına eklenecek
 
 # class ResimFormu(forms.Form):
 #     resim = forms.FileField()
