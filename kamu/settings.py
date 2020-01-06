@@ -40,9 +40,8 @@ INSTALLED_APPS = [
     #Benim uygulamalarım
     'app',
     #3. parti uygulamalar
-    # 'django_cleanup',
+    'django_cleanup',
     'crispy_forms',
-    # 'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +142,6 @@ EMAIL_HOST_PASSWORD = 'enes.072'
 EMAIL_USE_TLS = True
 
 EMAIL_FROM = 'enesgulec@gmail.com'
+
+THUMB_SIZE = (200, 200)
+

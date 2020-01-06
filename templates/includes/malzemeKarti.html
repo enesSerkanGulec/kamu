@@ -1,6 +1,6 @@
 {% load static %}
         <div class="card m-2 p-2"  style="width: 15rem; height: 25rem; background-color: {% if f.yayinda %}white{% else %}lightgrey{% endif %}">
-            <div class="container align-content-center"> {% include 'includes/slide.html' with resimler=f.resimler ilan_id=f.id %}</div>
+            <div class="container align-content-center"> {% include 'includes/slide.html' with resimler=f.silinmeyecek_resimler kucuk_resim=f.kucuk_resim yayinda=f.yayindami ilan_id=f.id %}</div>
 
             <div class="card-body" >
             <br>

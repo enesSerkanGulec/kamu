@@ -8,6 +8,6 @@
 <h1>Ana sayfa</h1>
 
     {% for form in resimler %}
-       <img src="{{form.resim.url}}" class="img-responsive">
+       <img src="{{form.resim.url}}" style="max-width: 85%;" class="img-responsive">
     {% endfor %}
 {% endblock %}

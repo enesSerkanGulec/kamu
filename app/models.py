@@ -3,7 +3,13 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
+import os
+import datetime
+from django.core.files.base import ContentFile
+# from django.core.files.storage import default_storage as storage
+from kamu.settings import THUMB_SIZE
+from io import BytesIO
 
 
 class UserManager(BaseUserManager):
@@ -58,20 +64,28 @@ class User(AbstractUser):
     objects = UserManager()
 
     def geciciResimlerimiTemizle(self):
-        for x in self.ilanlarım():
+        for x in self.ilanlarim():
             x.geciciResimleriTemizle()
 
-    def ilanlarım(self):
+    def ilan_temizligi(self):
+        ilan.objects.filter(sahip=self, silme_tarihi__isnull=False, yayinda=True).delete()
+
+    def ilanlarim(self):
         return ilan.objects.filter(sahip=self)
 
     def mesajlar(self):
         m = []
-        for x in self.ilanlarım():
+        for x in self.ilanlarim():
             m = m + x.mesajlar()
         return m
 
     def __str__(self):
         return str(self.kurum)
+
+    def delete(self, *args, **kwargs):
+        for x in self.ilanlarim():
+            x.delete()
+        super(User, self).delete(*args, **kwargs)
 
 
 class Kategori(models.Model):
@@ -89,48 +103,123 @@ class Kategori(models.Model):
 
 
 class ilan(models.Model):
-    sahip = models.ForeignKey('User', null=True, on_delete=models.CASCADE)
+    sahip = models.ForeignKey('User', null=True, on_delete=models.SET_NULL)
     kategori = models.ForeignKey('Kategori', null=True, on_delete=models.SET_NULL)
     ad = models.CharField(max_length=40, verbose_name='ilan adı', null=True)
     adet = models.IntegerField(verbose_name='Adet', default=1, null=True)
     aciklama = models.TextField(verbose_name='Açıklama', blank=True)
     yayinda = models.BooleanField(verbose_name='Yayında', default=True)
-    tarih = models.DateField(auto_now=True, null=False, blank=False)
+    olusturma_tarihi = models.DateField(auto_now=True, null=False, blank=False)
+    silme_tarihi = models.DateField(null=True, blank=True)
+    kurum = models.CharField(max_length=100,null=True,blank=True)
+    kucuk_resim = models.ImageField(upload_to='silinenilanlar', editable=False, blank=True, null=True)
+
+    def sil(self):
+        self.kurum = self.sahip.kurum
+        self.sahip = None
+        self.yayinda = False
+        self.silme_tarihi = datetime.datetime.now()
+        self.kucukResimOlustur(yazi='İlan Silinmiş')
+        Resim.objects.filter(ilan=self).delete()
+
+    def yayindami(self):
+        return not self.silme_tarihi and self.yayinda
+
+    def delete(self, *args, **kwargs):
+        if self.silme_tarihi and self.yayinda:
+            super(ilan, self).delete(*args, **kwargs)
+        else:
+            self.sil()
+
+    def yayindan_cek(self):
+        self.yayinda = False
+        self.kucukResimOlustur()
+
+    def yayinla(self):
+        self.yayinda=True
+        self.kucuk_resim.delete(save=True)
+
+    def kucukResimOlustur(self, yazi='Yayında Değil'):
+        if self.kucuk_resim:
+            self.kucuk_resim.delete(save=True)
+
+        r = Resim.objects.filter(ilan=self).first()
+        image = Image.open(r.kucukResim)
+
+        width, height = image.size
+        draw = ImageDraw.Draw(image).convert('L')
+        # .convert('L') ile gri tonlama yapıyoruz.
+        text = yazi
+        font = ImageFont.truetype('arial.ttf', 33)
+        textwidth, textheight = draw.textsize(text, font)
+
+        # calculate the x,y coordinates of the text
+        margin = 5
+        # Tam ortaya Alıyor
+        x = (width - textwidth - margin * 2) / 2
+        y = (height - textheight - margin * 2) / 2
+        # Yazıdan önce siyah bir dikdörtgen çiziyor
+        draw.rectangle([x - 3, y - 3, x + textwidth + 6, y + textheight + 6], fill='red')
+        # yazıyı yazıyor
+        draw.text((x, y), text, font=font)
+
+        image.thumbnail(THUMB_SIZE, Image.ANTIALIAS)
+
+        thumb_name, thumb_extension = os.path.splitext(r.kucukResim.name)
+        thumb_extension = thumb_extension.lower()
+
+        thumb_filename = thumb_name + '_laMevcut' + thumb_extension
+
+        if thumb_extension in ['.jpg', '.jpeg']:
+            FTYPE = 'JPEG'
+        elif thumb_extension == '.gif':
+            FTYPE = 'GIF'
+        elif thumb_extension == '.png':
+            FTYPE = 'PNG'
+        else:
+            return False  # Unrecognized file type
+
+        # Save thumbnail to in-memory file as StringIO
+        temp_thumb = BytesIO()
+        image.save(temp_thumb, FTYPE)
+        temp_thumb.seek(0)
+
+        # set save=False, otherwise it will run in an infinite loop
+        self.kucuk_resim.save(thumb_filename, ContentFile(temp_thumb.read()), save=False)
+        temp_thumb.close()
+        return True
 
     def __str__(self):
         return str(self.kategori) + ' - ' + str(self.ad)
 
-    def resimler(self):
+    def tum_resimleri_getir(self):
         return Resim.objects.filter(ilan=self)
 
+    def silinmeyecek_resimler(self):
+        return Resim.objects.filter(ilan=self, silinecek=False)
+
+    def resim_adet(self):
+        return Resim.objects.filter(ilan=self, silinecek=False).count()
+
+    def mesajAdet(self):
+        return Mesajlar.objects.filter(ilan=self).count()
+
+    def okunmayanMesajAdet(self):
+        return Mesajlar.objects.filter(ilan=self, okundu=False).count()
+
+    # def kacFavorideKayitli(self):
+    #     return favoriler.objects.filter(ilan=self).count()
+    #
+
     def geciciResimleriTemizle(self):
-        GeciciResim.objects.filter(ilan=self).delete()
+        Resim.objects.filter(ilan=self, kayitli=False).delete()
+        Resim.objects.filter(ilan=self, silinecek=True).update(silinecek=False)
 
-    def geciciResimleriDoldur(self):
-        for x in self.resimler():
-            self.geciciResimEkle(resim=x.resim, kayitliMi=True)
-            # _geciciResim = GeciciResim(ilan=self, resim=x.resim)
-            # _geciciResim.save()
-
-    def geciciResimleriGetir(self):
-        # self.geciciResimleriDoldur()
-        return GeciciResim.objects.filter(ilan=self, silinecek=False)
-
-    def geciciResimleriKaydet(self):
-        _gr = GeciciResim.objects.filter(ilan=self)
-        for x in _gr:
-            if not x.kayitli and not x.silinecek:
-                self.resimekle(resim=x.resim)
-            if x.kayitli and x.silinecek:
-                Resim.objects.get(ilan=self, resim=x.resim).delete()
-            #x.delete()
-
-    def geciciResimEkle(self, resim, kayitliMi=False):
+    def geciciResimEkle(self, resim):
         try:
-            x = GeciciResim.objects.get(ilan=self, resim=resim)
+            x = Resim.objects.get(ilan=self, resim=resim)
         except:
-            _ = GeciciResim(ilan=self, resim=resim, kayitli=kayitliMi)
-            _.save()
+            self.resimekle(resim)
             return ""
         else:
             if x.silinecek:
@@ -143,42 +232,85 @@ class ilan(models.Model):
         yeniresim = Resim()
         yeniresim.ilan = self
         yeniresim.resim = resim
+        yeniresim.kayitli = False
+        yeniresim.silinecek = False
         yeniresim.save()
 
     def mesajlar(self):
         return Mesajlar.objects.filter(ilan=self)
 
-    def mesajAdet(self):
-        return Mesajlar.objects.filter(ilan=self).count()
-
-    def okunmayanMesajAdet(self):
-        return Mesajlar.objects.filter(ilan=self, okundu=False).count()
+    def save(self, *args, **kwargs):
+        if not(self.silme_tarihi and self.yayinda):
+            Resim.objects.filter(ilan=self, silinecek=True).delete()
+            Resim.objects.filter(ilan=self, kayitli=False).update(kayitli=True)
+        super(ilan, self).save(*args, **kwargs)
 
 
 class Resim(models.Model):
     ilan = models.ForeignKey('ilan', on_delete=models.CASCADE, null=True)
     resim = models.ImageField(verbose_name='Resim', null=True)
+    kayitli = models.BooleanField(default=False)
+    silinecek = models.BooleanField(default=False)
+    kucukResim = models.ImageField(upload_to='thumbs', editable=False, blank=True, null=True)
 
     class Meta:
         ordering = ['ilan']
 
+    def save(self, *args, **kwargs):
+        if not self.make_thumbnail():
+            # set to a default thumbnail
+            raise Exception('Could not create thumbnail - is the file type valid?')
+        super(Resim, self).save(*args, **kwargs)
+
+    def make_thumbnail(self):
+
+        image = Image.open(self.resim)
+        image.thumbnail(THUMB_SIZE, Image.ANTIALIAS)
+
+        thumb_name, thumb_extension = os.path.splitext(self.resim.name)
+        thumb_extension = thumb_extension.lower()
+
+        thumb_filename = thumb_name + '_thumb' + thumb_extension
+
+        if thumb_extension in ['.jpg', '.jpeg']:
+            FTYPE = 'JPEG'
+        elif thumb_extension == '.gif':
+            FTYPE = 'GIF'
+        elif thumb_extension == '.png':
+            FTYPE = 'PNG'
+        else:
+            return False  # Unrecognized file type
+
+        # Save thumbnail to in-memory file as StringIO
+        temp_thumb = BytesIO()
+        image.save(temp_thumb, FTYPE)
+        temp_thumb.seek(0)
+
+        # set save=False, otherwise it will run in an infinite loop
+        self.kucukResim.save(thumb_filename, ContentFile(temp_thumb.read()), save=False)
+        temp_thumb.close()
+
+        return True
+
     def __str__(self):
         return self.resim.name
 
-
-class GeciciResim(models.Model):
-    ilan = models.ForeignKey('ilan', on_delete=models.CASCADE, null=True)
-    resim = models.ImageField(verbose_name='Resim', null=True)
-    kayitli = models.BooleanField(default=True)
-    silinecek = models.BooleanField(default=False)
+    def kaydet(self):
+        self.kayitli = True
+        self.silinecek = False
 
     def sil(self):
-        self.silinecek = True
+        if self.ilan.resim_adet()>1:
+            self.silinecek = True
+            return ""
+        else:
+            return "İlanda en az bir resim olmalıdır."
 
 
 class KayitBekleyenler(models.Model):
-    email = models.EmailField(_('email address'), unique=True,)
-    kurum = models.CharField(max_length=100, verbose_name='Kurum', null=True)
+    # _('email address')
+    email = models.EmailField('Kurum e-posta adresi', unique=True,)
+    kurum = models.CharField(max_length=100, verbose_name='Kurum adı', null=True)
     kurum_adres = models.CharField(max_length=200, verbose_name='Kurum adresi', null=True)
     phone_regex = RegexValidator(regex=r'^\+?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{2} ?[0-9]{2}$',
                                  message="Telefon numarası şu şeklillerden biri gibi olmalı: '+9999999999' veya "

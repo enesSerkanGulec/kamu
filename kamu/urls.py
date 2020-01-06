@@ -30,5 +30,6 @@ urlpatterns = [
     path('bilgiler/<str:islem>', views.bilgiler, name='hesapbilgileriislemi'),
     path('ilanlar/', views.ilanlarim, name='ilanlarimislemi'),
     path('ilandetay/<int:id>', views.ilan_detay, name='ilandetayislemi'),
+    path('yeniilan/', views.ilan_detay, name='yeniilan'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

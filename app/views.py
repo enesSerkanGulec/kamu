@@ -162,41 +162,48 @@ def anasayfa(request):
 
 @login_required(login_url='girisislemi')
 def ilanlarim(request):
-    # form = ilan.objects.filter(sahip=request.user)
-    form = request.user.ilanlarım()
     request.user.geciciResimlerimiTemizle()
+    request.user.ilan_temizligi()
+    # form = ilan.objects.filter(sahip=request.user)
+    # form = request.user.ilanlarim()
     if request.method == 'POST':
         ilan_veri = request.POST.get('ilan').split(';')
-        _ilan = ilan.objects.get(id=ilan_veri[1])
-        if ilan_veri[0] == 'sil':
-            _ilan.delete()
-            messages.success(request, 'ilan silindi')
-        elif ilan_veri[0] == 'yayinla':
-            _ilan.yayinda = not _ilan.yayinda
-            _ilan.save()
-            if _ilan.yayinda:
-                messages.success(request, 'İlan yayınlandı.')
-            else:
-                messages.warning(request, 'İlan yayından kaldırıldı.')
-        form = ilan.objects.filter(sahip=request.user)
+        if ilan_veri[0] == 'yeni':
+            pass
+        else:
+            _ilan = ilan.objects.get(id=ilan_veri[1])
+            if ilan_veri[0] == 'sil':
+                _ilan.delete()
+                messages.success(request, 'ilan silindi')
+            elif ilan_veri[0] == 'yayinla':
+                if _ilan.yayinda:
+                    _ilan.yayindan_cek()
+                    messages.warning(request, 'İlan yayından kaldırıldı.')
+                else:
+                    _ilan.yayinla()
+                    messages.success(request, 'İlan yayınlandı.')
+                _ilan.save()
+    # else:
+    #     request.user.geciciResimlerimiTemizle()
+    form = request.user.ilanlarim()
     return render(request, 'ilanlarim.html', {'form': form})
 
 
-@login_required(login_url='girisislemi')
-def ilan_detay1(request, id):
-    hangi_ilan = ilan.objects.get(id=id)
-    form = resimliİlanFormu(request.POST or None, request.FILES or None, instance=hangi_ilan)
-    if request.method == 'POST':
-        islem = request.POST.get('btn')
-        if islem == 'resim':
-            hangi_ilan.resimekle(resim=request.FILES['resim'])
-            messages.success(request, 'Resim eklendi')
-        elif islem == 'kaydet':
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Değişiklikler kaydedildi')
-                return redirect(ilanlarim)
-    return render(request, 'ilanDetay.html', {'form': form, 'resimler': hangi_ilan.resimler()})
+# @login_required(login_url='girisislemi')
+# def ilan_detay1(request, id):
+#     hangi_ilan = ilan.objects.get(id=id)
+#     form = resimliİlanFormu(request.POST or None, request.FILES or None, instance=hangi_ilan)
+#     if request.method == 'POST':
+#         islem = request.POST.get('btn')
+#         if islem == 'resim':
+#             hangi_ilan.resimekle(resim=request.FILES['resim'])
+#             messages.success(request, 'Resim eklendi')
+#         elif islem == 'kaydet':
+#             if form.is_valid():
+#                 form.save()
+#                 messages.success(request, 'Değişiklikler kaydedildi')
+#                 return redirect(ilanlarim)
+#     return render(request, 'ilanDetay.html', {'form': form, 'resimler': hangi_ilan.resimler()})
 
 
 # class resimlerSinifi():
@@ -214,35 +221,36 @@ def ilan_detay1(request, id):
 #
 #
 # s = None
+@login_required(login_url='girisislemi')
+def yeni_ilan(request):
+    yeni = ilan()
+    yeni.sahip = request.user
+
 
 @login_required(login_url='girisislemi')
-def ilan_detay(request, id):
-    hangi_ilan = ilan.objects.get(id=id)
-    resimAdet=0
-    if request.method == 'GET':
-        hangi_ilan.geciciResimleriDoldur()
-        _resimler = hangi_ilan.geciciResimleriGetir()
-        resimAdet = _resimler.count()
-    #     _resimler = hangi_ilan.geciciResimleriGetir()
-    # else:
+def ilan_detay(request, id=None):
+    # if request.method == 'GET':
+    if id:
+        hangi_ilan = ilan.objects.get(id=id)
+        gerekli = False
+    else:
+        hangi_ilan = ilan(sahip=request.user, silme_tarihi=datetime.datetime.now(), yayinda=True)
+        hangi_ilan.save()
+        gerekli = True
 
-
-
-
-    form = resimliİlanFormu(request.POST or None, request.FILES or None, instance=hangi_ilan)
-
+    form = resimliİlanFormu(data=request.POST or None, files=request.FILES or None, instance=hangi_ilan, gerekli=gerekli or None)
     if request.method == 'POST':
         islem = request.POST.get('btn')
         if islem == 'resim':
             s = hangi_ilan.geciciResimEkle(resim=request.FILES['resim'])
-            _resimler = hangi_ilan.geciciResimleriGetir()
-            resimAdet = _resimler.count()
             if s:
                 messages.error(request, s)
         elif islem == 'kaydet':
             if form.is_valid():
+                hangi_ilan.silme_tarihi = None
                 form.save()
-                hangi_ilan.geciciResimleriKaydet()
                 messages.success(request, 'Değişiklikler kaydedildi')
                 return redirect(ilanlarim)
+    _resimler = hangi_ilan.silinmeyecek_resimler()
+    resimAdet = _resimler.count()
     return render(request, 'ilanDetay.html', {'form': form, 'resimler': _resimler, 'resimAdet': resimAdet})

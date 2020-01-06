@@ -6,6 +6,9 @@
 
     <div class="row d-block w-100 text-center">{% include 'includes/messages.html' %}</div>
     <div class="row">
+{#        <a href="{% url 'yeniilan' %}" class="card-link" title="Yeni İlan">#}
+{#                        <span class="fa fa-id-card-o" style="color: black"></span></a>#}
+
         {% for f in form %}
             {% include 'includes/malzemeKarti.html' with f=f %}
         {% endfor %}

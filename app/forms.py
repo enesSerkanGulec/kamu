@@ -96,11 +96,14 @@ class İlanFormu(forms.ModelForm):
 
 # Son çalışan hali
 class resimliİlanFormu(İlanFormu):
-    resim = forms.ImageField(required=False)
+    resim = forms.ImageField()
 
     class Meta(İlanFormu.Meta):
         fields = İlanFormu.Meta.fields + ['resim', ]
 
+    def __init__(self, gerekli=False, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['resim'].required = gerekli
 
 class resimFormu(forms.Form):
     resim = forms.ImageField(required=False)
@@ -109,14 +112,14 @@ class resimFormu(forms.Form):
         fields = ['resim', ]
 
 
-class geciciResimFormu(forms.ModelForm):
-
-    class Meta:
-        model = GeciciResim
-        widgets = {
-            'resim': forms.ImageField(),
-        }
-        fields = ['resim', ]
+# class geciciResimFormu(forms.ModelForm):
+#
+#     class Meta:
+#         model = GeciciResim
+#         widgets = {
+#             'resim': forms.ImageField(),
+#         }
+#         fields = ['resim', ]
 
 
 # class resimSinifi(forms.Form):

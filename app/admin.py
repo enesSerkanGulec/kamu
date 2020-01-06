@@ -36,7 +36,7 @@ class ilanAdmin(admin.ModelAdmin):
     #    (None, {'fields': ('ad',)}),
     #    (_('Adet'))
     #)
-    list_display = ('ad', 'adet', 'sahip', 'kategori', 'resim_sayisi', 'tarih')
+    list_display = ('ad', 'adet', 'sahip', 'kategori', 'resim_sayisi', 'olusturma_tarihi')
 
     class Meta:
         model = ilan
