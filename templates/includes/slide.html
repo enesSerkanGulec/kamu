@@ -1,6 +1,6 @@
 {% load static %}
 
-{% if not resimler  and not yayinda and not kucuk_resim%}
+{% if not resimler and yayinda or not yayinda and not kucuk_resim %}
     <span class="fa fa-image" style="font-size: 180px"></span>
 {% else %}
     {% if not yayinda %}
@@ -15,7 +15,7 @@
           <div class="carousel-inner">
               {% for resim in resimler %}
                 <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif%}">
-                    <img src="{{ resim.resim.url }}" width="200" height="200" class="d-block w-100 img-fluid">
+                    <a href="{{ resim.resim.url }}"><img src="{{ resim.resim.url }}" width="200" height="200" class="d-block w-100 img-fluid"></a>
     {#                {{ resim.image_tag}}#}
                 </div>
               {% endfor %}

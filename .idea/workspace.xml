@@ -2,35 +2,137 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71458b19-df85-4972-b36a-dc2b7820becc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/migrations/0014_auto_20191226_2329.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0015_geciciresim_kucukresim.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0016_auto_20191227_0954.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0017_auto_20191227_0954.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0018_auto_20191227_0955.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0019_auto_20191231_0041.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0020_auto_20191231_1417.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0021_auto_20200101_0202.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/arial.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/büromasa_thumb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/arial.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mahalle.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0002_auto_20200115_1601.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0003_auto_20200116_0941.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0004_auto_20200116_1308.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0005_sikayet_nedenleri.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0006_auto_20200121_0013.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0007_sikayet_aciklama.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0008_auto_20200121_0115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0009_auto_20200121_0914.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0010_auto_20200122_0304.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0011_mesaj_mesajhareketleri.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0012_auto_20200129_0045.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0013_auto_20200129_0059.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0014_auto_20200129_1642.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0015_auto_20200129_1643.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/favorikontrol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ilceler.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iller.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/acer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/adaptör.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/adaptör_umZzMUu.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/adaptör_thumb_6zd52tv_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/büromasa_thumb_laMevcut.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/büromasa_thumb_laMevcut_cCJSo9E.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sandalye_thumb_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sandalye_thumb_laMevcut_jSf10xE.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sunta_thumb_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sunta_thumb_laMevcut_bMLczF0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/telsiz1_thumb_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/telsiz_thumb_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/öğrencimasa_thumb_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/telsiz.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/telsiz1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/telsiz1_4jmJM2v.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/telsiz_hUCKeQ5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/acer_thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/adaptör_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/adaptör_thumb_jaLQEJB.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz1_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz1_thumb_y6HksLV.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz_thumb_A692qVL.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/öğrencimasa_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/öğrencimasa_thumb_sfOSFQs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/öğrencimasa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/öğrencimasa_DMTsY9z.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ilan_inceleme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/mesajNavBar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mesajlar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/yeniilan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/installed-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/db_fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/form_fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/static/smart-selects/admin/js/bindfields.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/static/smart-selects/admin/js/chainedfk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/static/smart-selects/admin/js/chainedm2m.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/chained_m2m_select.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/chained_select.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/grouped_select.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0002_book1_location1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0003_auto_20160129_1531.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0004_auto_20170309_0016.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0004_client_domain_website.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0005_merge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0006_auto_20170707_2000.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e289f354-bf71-4fb7-8bf9-0d33a6e2727b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e289f354-bf71-4fb7-8bf9-0d33a6e2727b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_mesajlar_mesaj_metni.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20191207_1433.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20191207_1435.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0005_auto_20191208_0934.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0006_ilan_yayinda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0007_auto_20191215_0843.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0008_geciciresimler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0009_auto_20191217_1852.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0010_geciciresim_kayitli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0011_geciciresim_silinecek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0012_auto_20191217_2205.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0013_ilan_tarih.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0014_auto_20191226_2329.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0015_geciciresim_kucukresim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0016_auto_20191227_0954.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0017_auto_20191227_0954.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0018_auto_20191227_0955.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0019_auto_20191231_0041.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0020_auto_20191231_1417.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0021_auto_20200101_0202.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kamu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kamu/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kamu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kamu/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/büromasa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/telsiz.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/telsiz1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/telsiz1_VXhblvN.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/telsiz_qCdvJjx.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/öğrencimasa.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/thumbs/büromasa_thumb.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/anasayfa.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/anasayfa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bilgiler.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bilgiler.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ilanDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ilanDetay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ilanlarim.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ilanlarim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/base1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/base1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/malzemeKarti.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/malzemeKarti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/slide.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yapılacaklar" beforeDir="false" afterPath="$PROJECT_DIR$/yapılacaklar" afterDir="false" />
     </list>
@@ -77,8 +179,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -108,25 +210,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/static/bootstrap4.3.1" />
-      <recent name="$PROJECT_DIR$/app/static" />
-      <recent name="$PROJECT_DIR$/app/templatetags" />
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/app/templatetags" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates/includes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/app/templatetags" />
       <recent name="$PROJECT_DIR$/app/static/bootstrap4.3.1" />
-      <recent name="$PROJECT_DIR$/app/static/bootstrap4.3.1/css" />
-      <recent name="$PROJECT_DIR$/app/static/bootstrap4.3.1/Font-Awesome-fa-4" />
+      <recent name="$PROJECT_DIR$/app/static" />
     </key>
   </component>
   <component name="RunManager">
@@ -160,17 +262,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@624f1839" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -209,6 +301,15 @@
       <workItem from="1577002553851" duration="21455000" />
       <workItem from="1577708640865" duration="38035000" />
       <workItem from="1578296629095" duration="241000" />
+      <workItem from="1578296888897" duration="6439000" />
+      <workItem from="1578380029769" duration="13409000" />
+      <workItem from="1578470103451" duration="36915000" />
+      <workItem from="1578829803886" duration="35730000" />
+      <workItem from="1579156717425" duration="78000" />
+      <workItem from="1579156817030" duration="22193000" />
+      <workItem from="1579436889202" duration="11841000" />
+      <workItem from="1579559873927" duration="32413000" />
+      <workItem from="1580312365035" duration="238000" />
     </task>
     <servers />
   </component>
@@ -236,136 +337,128 @@
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="106" y="42" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1296.768@0.0.1296.768" timestamp="1576915176974" />
-    <state x="381" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576952349564">
-      <screen x="0" y="0" width="2656" height="768" />
+    <state x="188" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579080032181">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
+    <state x="186" y="133" width="380" height="516" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1296.768@0.0.1296.768" timestamp="1579077014243" />
+    <state x="188" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1312.768@0.0.1312.768" timestamp="1579080032181" />
     <state x="381" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2656.768@0.0.2656.768" timestamp="1576952349564" />
+    <state x="458" y="140" width="369" height="495" key="#xdebugger.XInspectDialog" timestamp="1579197061762">
+      <screen x="0" y="0" width="1296" height="768" />
+    </state>
+    <state x="458" y="140" width="369" height="495" key="#xdebugger.XInspectDialog/0.0.1296.768@0.0.1296.768" timestamp="1579197061762" />
+    <state x="406" y="87" key="#xdebugger.evaluate" timestamp="1579704997076">
+      <screen x="0" y="0" width="1296" height="768" />
+    </state>
+    <state x="406" y="87" key="#xdebugger.evaluate/0.0.1296.768@0.0.1296.768" timestamp="1579704997076" />
     <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2" timestamp="1577210616746">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2/0.0.1296.768@0.0.1296.768" timestamp="1577210616746" />
-    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1578035263109">
+    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1578472681666">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="956" height="466" key="DebuggerActiveHint/0.0.1296.768@0.0.1296.768" timestamp="1578035263109" />
+    <state width="956" height="466" key="DebuggerActiveHint/0.0.1296.768@0.0.1296.768" timestamp="1578472681666" />
     <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog" timestamp="1576785210147">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog/0.0.1296.768@0.0.1296.768" timestamp="1576785210147" />
-    <state width="854" height="190" key="GridCell.Tab.0.bottom" timestamp="1578296800057">
+    <state width="1250" height="258" key="GridCell.Tab.0.bottom" timestamp="1580306234401">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="854" height="190" key="GridCell.Tab.0.bottom/0.0.1296.768@0.0.1296.768" timestamp="1578296800057" />
+    <state width="1250" height="258" key="GridCell.Tab.0.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580306234401" />
+    <state width="1266" height="269" key="GridCell.Tab.0.bottom/0.0.1312.768@0.0.1312.768" timestamp="1579173092441" />
     <state width="1250" height="225" key="GridCell.Tab.0.bottom/0.0.2656.768@0.0.2656.768" timestamp="1576953020273" />
-    <state width="854" height="190" key="GridCell.Tab.0.center" timestamp="1578296800056">
+    <state width="1250" height="258" key="GridCell.Tab.0.center" timestamp="1580306234401">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="854" height="190" key="GridCell.Tab.0.center/0.0.1296.768@0.0.1296.768" timestamp="1578296800056" />
+    <state width="1250" height="258" key="GridCell.Tab.0.center/0.0.1296.768@0.0.1296.768" timestamp="1580306234401" />
+    <state width="1266" height="269" key="GridCell.Tab.0.center/0.0.1312.768@0.0.1312.768" timestamp="1579173092440" />
     <state width="1250" height="225" key="GridCell.Tab.0.center/0.0.2656.768@0.0.2656.768" timestamp="1576953020272" />
-    <state width="854" height="190" key="GridCell.Tab.0.left" timestamp="1578296800055">
+    <state width="1250" height="258" key="GridCell.Tab.0.left" timestamp="1580306234400">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="854" height="190" key="GridCell.Tab.0.left/0.0.1296.768@0.0.1296.768" timestamp="1578296800055" />
+    <state width="1250" height="258" key="GridCell.Tab.0.left/0.0.1296.768@0.0.1296.768" timestamp="1580306234400" />
+    <state width="1266" height="269" key="GridCell.Tab.0.left/0.0.1312.768@0.0.1312.768" timestamp="1579173092440" />
     <state width="1250" height="225" key="GridCell.Tab.0.left/0.0.2656.768@0.0.2656.768" timestamp="1576953020272" />
-    <state width="854" height="190" key="GridCell.Tab.0.right" timestamp="1578296800056">
+    <state width="1250" height="258" key="GridCell.Tab.0.right" timestamp="1580306234401">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="854" height="190" key="GridCell.Tab.0.right/0.0.1296.768@0.0.1296.768" timestamp="1578296800056" />
+    <state width="1250" height="258" key="GridCell.Tab.0.right/0.0.1296.768@0.0.1296.768" timestamp="1580306234401" />
+    <state width="1266" height="269" key="GridCell.Tab.0.right/0.0.1312.768@0.0.1312.768" timestamp="1579173092441" />
     <state width="1250" height="225" key="GridCell.Tab.0.right/0.0.2656.768@0.0.2656.768" timestamp="1576953020273" />
-    <state width="1250" height="225" key="GridCell.Tab.1.bottom" timestamp="1578177372054">
+    <state width="1250" height="192" key="GridCell.Tab.1.bottom" timestamp="1580247874462">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="225" key="GridCell.Tab.1.bottom/0.0.1296.768@0.0.1296.768" timestamp="1578177372054" />
+    <state width="1250" height="192" key="GridCell.Tab.1.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580247874462" />
+    <state width="1266" height="269" key="GridCell.Tab.1.bottom/0.0.1312.768@0.0.1312.768" timestamp="1579173119414" />
     <state width="1250" height="225" key="GridCell.Tab.1.bottom/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state width="1250" height="225" key="GridCell.Tab.1.center" timestamp="1578177372054">
+    <state width="1250" height="192" key="GridCell.Tab.1.center" timestamp="1580247874461">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="225" key="GridCell.Tab.1.center/0.0.1296.768@0.0.1296.768" timestamp="1578177372054" />
+    <state width="1250" height="192" key="GridCell.Tab.1.center/0.0.1296.768@0.0.1296.768" timestamp="1580247874461" />
+    <state width="1266" height="269" key="GridCell.Tab.1.center/0.0.1312.768@0.0.1312.768" timestamp="1579173119413" />
     <state width="1250" height="225" key="GridCell.Tab.1.center/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state width="1250" height="225" key="GridCell.Tab.1.left" timestamp="1578177372053">
+    <state width="1250" height="192" key="GridCell.Tab.1.left" timestamp="1580247874461">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="225" key="GridCell.Tab.1.left/0.0.1296.768@0.0.1296.768" timestamp="1578177372053" />
+    <state width="1250" height="192" key="GridCell.Tab.1.left/0.0.1296.768@0.0.1296.768" timestamp="1580247874461" />
+    <state width="1266" height="269" key="GridCell.Tab.1.left/0.0.1312.768@0.0.1312.768" timestamp="1579173119413" />
     <state width="1250" height="225" key="GridCell.Tab.1.left/0.0.2656.768@0.0.2656.768" timestamp="1576953027546" />
-    <state width="1250" height="225" key="GridCell.Tab.1.right" timestamp="1578177372054">
+    <state width="1250" height="192" key="GridCell.Tab.1.right" timestamp="1580247874462">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="225" key="GridCell.Tab.1.right/0.0.1296.768@0.0.1296.768" timestamp="1578177372054" />
+    <state width="1250" height="192" key="GridCell.Tab.1.right/0.0.1296.768@0.0.1296.768" timestamp="1580247874462" />
+    <state width="1266" height="269" key="GridCell.Tab.1.right/0.0.1312.768@0.0.1312.768" timestamp="1579173119413" />
     <state width="1250" height="225" key="GridCell.Tab.1.right/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state x="223" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1577210682447">
+    <state x="223" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1579648368375">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="223" y="31" width="1022" height="737" key="SettingsEditor/0.0.1296.768@0.0.1296.768" timestamp="1577210682447" />
+    <state x="223" y="31" width="1022" height="737" key="SettingsEditor/0.0.1296.768@0.0.1296.768" timestamp="1579648368375" />
     <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1577046900036">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2/0.0.1296.768@0.0.1296.768" timestamp="1577046900036" />
-    <state x="381" y="192" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1576952157699">
-      <screen x="0" y="0" width="2656" height="768" />
+    <state x="186" y="192" width="287" height="398" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1579558776316">
+      <screen x="0" y="0" width="1296" height="768" />
     </state>
+    <state x="186" y="192" width="287" height="398" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1296.768@0.0.1296.768" timestamp="1579558776316" />
     <state x="381" y="192" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.2656.768@0.0.2656.768" timestamp="1576952157699" />
     <state x="233" y="0" width="818" height="768" key="com.intellij.database.run.actions.ShowCsvFormatsAction$ForExport" timestamp="1576823537154">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="233" y="0" width="818" height="768" key="com.intellij.database.run.actions.ShowCsvFormatsAction$ForExport/0.0.1296.768@0.0.1296.768" timestamp="1576823537154" />
-    <state x="305" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578296928999">
+    <state x="305" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1580312366676">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="305" y="211" key="com.intellij.ide.util.TipDialog/0.0.1296.768@0.0.1296.768" timestamp="1578296928999" />
+    <state x="305" y="211" key="com.intellij.ide.util.TipDialog/0.0.1296.768@0.0.1296.768" timestamp="1580312366676" />
     <state x="301" y="0" width="683" height="768" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577902731417">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="301" y="0" width="683" height="768" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1296.768@0.0.1296.768" timestamp="1577902731417" />
-    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup" timestamp="1576785618025">
+    <state x="135" y="110" width="920" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579079967122">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state x="135" y="110" width="920" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1312.768@0.0.1312.768" timestamp="1579079967122" />
+    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup" timestamp="1579650114478">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup/0.0.1296.768@0.0.1296.768" timestamp="1576785618025" />
+    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup/0.0.1296.768@0.0.1296.768" timestamp="1579650114478" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/Silinecekler/tabprofil.html</url>
-          <line>42</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/Silinecekler/tabprofil.html</url>
-          <line>43</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/models.py</url>
-          <line>337</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/models.py</url>
-          <line>142</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/models.py</url>
-          <line>242</line>
-          <option name="timeStamp" value="83" />
+          <url>file://$PROJECT_DIR$/templates/anasayfa.html</url>
+          <line>10</line>
+          <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>164</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>232</line>
-          <option name="timeStamp" value="85" />
+          <line>182</line>
+          <option name="timeStamp" value="134" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Python.DjangoServer">
-        <watch expression="form" language="Python" />
-        <watch expression="request" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

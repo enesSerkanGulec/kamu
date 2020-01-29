@@ -22,14 +22,24 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('chaining/', include('smart_selects.urls')),
+    # path('__debug__/', include(debug_toolbar.urls)),
     path('logout/', views.logoutt, name='cikisislemi'),
     path('profil/', include('app.urls')),
     path('', views.welcomeislemi),
+    path('', views.welcomeislemi, name='girisislemi'),
     path('welcome/<int:islem>/', views.welcomeislemi, name='karsilamaislemi'),
     path('anasayfa/', views.anasayfa, name='anasayfaislemi'),
+    path('islem/<int:id>/<str:islem>', views.anasayfa, name='islemler'),
     path('bilgiler/<str:islem>', views.bilgiler, name='hesapbilgileriislemi'),
     path('ilanlar/', views.ilanlarim, name='ilanlarimislemi'),
     path('ilandetay/<int:id>', views.ilan_detay, name='ilandetayislemi'),
-    path('yeniilan/', views.ilan_detay, name='yeniilan'),
+    path('yeniilan/', views.yeni_ilan, name='yeniilanislemi'),
+    path('favoriler/', views.favorilerim, name='favoriislemi'),
+    path('favoricikar/<int:id>/<str:islem>', views.favorilerim, name='favoricikar'),
+    path('iller/', views.il_ilce_veritanamını_aktar),
+    path('ilan_inceleme/<int:id>/<str:islem>', views.ilan_incele, name='ilan_inceleme'),
+    path('ilan/<int:id>/<str:islem>', views.ilan_incele, name='ilan_inceleme_favori'),
+    path('mesajlarim/', views.mesajlarim, name='mesajlarimislemi')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

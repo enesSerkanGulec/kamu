@@ -7,7 +7,7 @@
 {% block body %}
 <h1>Ana sayfa</h1>
 
-    {% for form in resimler %}
-       <img src="{{form.resim.url}}" style="max-width: 85%;" class="img-responsive">
+    {% for f in ilanlar %}
+       {% include 'includes/malzemeKarti.html' with f=f islem=islem %}
     {% endfor %}
 {% endblock %}

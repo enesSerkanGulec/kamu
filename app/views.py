@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
+from django.http import Http404
 from .forms import *
 from django.contrib import messages
 from .models import User
@@ -25,7 +26,7 @@ def welcomeislemi(request, islem=1):
             user = authenticate(email=data['email'], password=data['sifre'])
             if user is not None:
                 login(request, user)
-                return anasayfa(request)
+                return redirect('anasayfaislemi')
             else:
                 messages.error(request, "Parola Hatalı")
         elif islem == 2:
@@ -96,14 +97,14 @@ def logoutt(request):
 
 @login_required(login_url='girisislemi')
 def bilgiler(request, islem):
-    form = None
     if islem == 'bilgiler':
-        form = BilgilerFormu(request.POST or None, instance=request.user)
+        form = BilgilerFormu(data=request.POST or None, instance=request.user)
     elif islem == 'parola':
         form = PasswordChangeForm(request.user, request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
-            user = form.save()
+            user = form.save(commit=False)
+            user.save()
             update_session_auth_hash(request, user)  # Important!
             messages.success(request, 'Yapılan değişiklikler kaydedildi.')
     return render(request, 'bilgiler.html', {'form': form})
@@ -140,12 +141,29 @@ def profil_sayfasi(request, islem, id=None):
 
 
 @login_required(login_url='/welcome/1/')
-def anasayfa(request):
-    # resimlerFormSet = modelformset_factory(GeciciResim, exclude=())
-    # formSet = resimlerFormSet(queryset=GeciciResim.objects.all())
-    # return render(request, 'anasayfa.html', {'user': request.user.kurum, 'resimler': formSet})
+def anasayfa(request, id=None, islem=None):
+    mesaj_formu = mesajFormu(request.POST or None)
+    if id:
+        i = get_object_or_404(ilan, id=id)
+        if islem == 'favorieklecikar':
+            if not i.yayinda:
+                raise Http404("İlan yayında değil. Silinmişde olabilir.")
+            else:
+                i.favorilere_ekle_cikar(user=request.user)
+    elif request.method == 'POST':
+        if 'mesaj' in request.POST:
+            if mesaj_formu.is_valid():
+                id = request.POST.get('mesaj').strip()
+                i = get_object_or_404(ilan, id=id)
+                xx = mesaj_formu.save(commit=False)
+                xx.gonderen = request.user
+                xx.ilgili_ilan = i
+                xx.save()
+                mesaj_formu = mesajFormu()
+                messages.success(request, 'Mesaj gönderildi..')
 
-    return render(request, 'anasayfa.html', {'user': request.user.kurum, 'resimler': Resim.objects.all()})
+    ilanlar = ilan.objects.filter(yayinda=True)
+    return render(request, 'ilanlarim.html', {'form': ilanlar, 'islem': 'anasayfa', 'sahip': request.user, 'mesaj_formu':mesaj_formu})
 
 
     # bilgiler = BilgilerFormu(request.POST or None, instance=request.user)
@@ -161,9 +179,31 @@ def anasayfa(request):
 
 
 @login_required(login_url='girisislemi')
+def favorilerim(request, id=None, islem=None):
+    mesaj_formu = mesajFormu(request.POST or None)
+    if id:
+        i = get_object_or_404(favoriler, id=id)
+        if islem == 'favoricikar':
+            i.delete()
+    elif request.method == 'POST':
+        if 'mesaj' in request.POST:
+            if mesaj_formu.is_valid():
+                id = request.POST.get('mesaj').strip()
+                i = get_object_or_404(ilan, id=id)
+                xx = mesaj_formu.save(commit=False)
+                xx.gonderen = request.user
+                xx.ilgili_ilan = i
+                xx.save()
+                mesaj_formu = mesajFormu()
+                messages.success(request, 'Mesaj gönderildi..')
+    favori_ilanlarim = request.user.favori_ilanlarım()
+    return render(request, 'ilanlarim.html', {'form': favori_ilanlarim, 'islem': 'favorilerim', 'sahip': request.user, 'mesaj_formu': mesaj_formu})
+
+
+
+@login_required(login_url='girisislemi')
 def ilanlarim(request):
-    request.user.geciciResimlerimiTemizle()
-    request.user.ilan_temizligi()
+    # request.user.silinecek_resimleri_iptal_et()
     # form = ilan.objects.filter(sahip=request.user)
     # form = request.user.ilanlarim()
     if request.method == 'POST':
@@ -173,8 +213,8 @@ def ilanlarim(request):
         else:
             _ilan = ilan.objects.get(id=ilan_veri[1])
             if ilan_veri[0] == 'sil':
-                _ilan.delete()
-                messages.success(request, 'ilan silindi')
+                _ilan.sil()
+                messages.warning(request, 'ilan silindi')
             elif ilan_veri[0] == 'yayinla':
                 if _ilan.yayinda:
                     _ilan.yayindan_cek()
@@ -186,7 +226,39 @@ def ilanlarim(request):
     # else:
     #     request.user.geciciResimlerimiTemizle()
     form = request.user.ilanlarim()
-    return render(request, 'ilanlarim.html', {'form': form})
+    return render(request, 'ilanlarim.html', {'form': form, 'islem': 'ilanlarım'})
+
+@login_required(login_url='girisislemi')
+def ilan_incele(request, id, islem=None):
+    x = get_object_or_404(ilan, id=id)
+    sikayet_formu = sikayetFormu(request.POST or None)
+    mesaj_formu = mesajFormu(request.POST or None)
+    if islem == 'favori':
+        x.favorilere_ekle_cikar(user=request.user)
+    if request.method == 'POST':
+        if 'sikayet' in request.POST:
+            if sikayet_formu.is_valid():
+                xx = sikayet_formu.save(commit=False)
+                xx.kim = request.user
+                xx.hangi_ilan = x
+                xx.save()
+                sikayet_formu = sikayetFormu()
+                messages.warning(request, 'Şikayet kaydınız oluşturuldu.')
+        elif 'mesaj' in request.POST:
+            if mesaj_formu.is_valid():
+                xx = mesaj_formu.save(commit=False)
+                xx.gonderen = request.user
+                xx.ilgili_ilan = x
+                xx.save()
+                mesaj_formu = mesajFormu()
+                messages.success(request, 'Mesaj gönderildi..')
+    r_adet = x.resimleri_getir().count()
+    return render(request, 'ilan_inceleme.html', {'form':  x, 'resim_adet': r_adet, 'sahip': request.user, 'sikayet_formu': sikayet_formu, 'mesaj_formu': mesaj_formu, 'nereden':islem})
+
+@login_required(login_url='girisislemi')
+def mesajlarim(request):
+    x = request.user.mesajNavBar_bilgileri_getir()
+    return render(request, 'mesajlar.html', {'islem': 'mesajlar'})
 
 
 # @login_required(login_url='girisislemi')
@@ -223,34 +295,73 @@ def ilanlarim(request):
 # s = None
 @login_required(login_url='girisislemi')
 def yeni_ilan(request):
-    yeni = ilan()
-    yeni.sahip = request.user
+    form = İlanFormu(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            data = form.cleaned_data
+            x = ilan()
+            x.sahip = request.user
+            x.kategori = data['kategori']
+            x.ad = data['ad']
+            x.adet = data['adet']
+            x.aciklama = data['aciklama']
+            x.save()
+            return redirect(ilan_detay, x.id)
+    return render(request, 'yeniilan.html', {'form': form})
 
 
 @login_required(login_url='girisislemi')
-def ilan_detay(request, id=None):
-    # if request.method == 'GET':
-    if id:
-        hangi_ilan = ilan.objects.get(id=id)
-        gerekli = False
-    else:
-        hangi_ilan = ilan(sahip=request.user, silme_tarihi=datetime.datetime.now(), yayinda=True)
-        hangi_ilan.save()
-        gerekli = True
-
-    form = resimliİlanFormu(data=request.POST or None, files=request.FILES or None, instance=hangi_ilan, gerekli=gerekli or None)
+def ilan_detay(request, id):
+    hangi_ilan = ilan.objects.get(id=id)
+    form = resimliİlanFormu(data=request.POST or None, files=request.FILES or None, instance=hangi_ilan)
     if request.method == 'POST':
         islem = request.POST.get('btn')
-        if islem == 'resim':
-            s = hangi_ilan.geciciResimEkle(resim=request.FILES['resim'])
+        if islem == 'resimekle':
+            s = hangi_ilan.resim_ekle(resim=request.FILES['resim'])
             if s:
                 messages.error(request, s)
+            else:
+                messages.success(request, 'Resim eklendi.')
         elif islem == 'kaydet':
             if form.is_valid():
-                hangi_ilan.silme_tarihi = None
+                # hangi_ilan.silme_tarihi = None
                 form.save()
                 messages.success(request, 'Değişiklikler kaydedildi')
                 return redirect(ilanlarim)
-    _resimler = hangi_ilan.silinmeyecek_resimler()
+        else:
+            islem, resim_id = islem.split(';')
+            if islem == 'resimsil':
+                Resim.objects.filter(id=resim_id).delete()
+    _resimler = hangi_ilan.resimleri_getir()
     resimAdet = _resimler.count()
     return render(request, 'ilanDetay.html', {'form': form, 'resimler': _resimler, 'resimAdet': resimAdet})
+
+def il_ilce_veritanamını_aktar(request):
+    pass
+    # file_il = open(file='iller.txt', mode='r', encoding='latin5')
+    # for s in file_il:
+    #     id, adi = s.split(';')
+    #     x = il(adi=adi.strip())
+    #     x.save()
+    # file_il.close()
+    # file_ilce = open(file='ilceler.txt', mode='r', encoding='latin5')
+    # for s in file_ilce:
+    #     id, il_id, ilce_adi = s.split(';')
+    #     # i = il.objects.filter(id=id).first()
+    #     ilce_adi = ilce_adi.strip()
+    #     x = ilce(adi=ilce_adi, ill_id=il_id)
+    #     x.save()
+    # file_ilce.close()
+    # file_mahalle = open(file='Mahalle.txt', mode='r', encoding='latin5')
+    # satir = file_mahalle.readline()
+    # while satir:
+    #     id, ilce_id, mahalle_adi = satir.split(';')
+    #     # i = il.objects.filter(id=id).first()
+    #     mahalle_adi = mahalle_adi.strip()
+    #     x = mahalle(adi=mahalle_adi, ilcee_id=ilce_id)
+    #     x.save()
+    #     x=None
+    #     satir = file_mahalle.readline()
+    # file_mahalle.close()
+    # messages.success(request, "Veritabanı dolduruldu")
+    # return redirect('anasayfaislemi')

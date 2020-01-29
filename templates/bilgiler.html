@@ -6,6 +6,7 @@
 
 {% block body %}
     <link rel="stylesheet" href="{% static 'css/hzscroller.css' %}">
+    <div class="row d-block text-center">{% include 'includes/messages.html' %}</div>
     <div class="row">
         <div class="col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-xs-10 offset-xs-1">
             {% load crispy_forms_tags %}

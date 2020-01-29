@@ -10,6 +10,7 @@ from django.core.files.base import ContentFile
 # from django.core.files.storage import default_storage as storage
 from kamu.settings import THUMB_SIZE
 from io import BytesIO
+from smart_selects.db_fields import ChainedForeignKey
 
 
 class UserManager(BaseUserManager):
@@ -58,20 +59,48 @@ class User(AbstractUser):
                                          "'9999999999' veya '999 9999999' veya '999 999 9999' veya '999 999 99 99'.")
     kurum_telefon = models.CharField(validators=[phone_regex], max_length=17, null=True, verbose_name='Kurum telefonu')  # validators should be a list
     kurum_web_adres = models.URLField(verbose_name='Kurum web adresi', null=True)
-
+    kurum_il = models.ForeignKey('il', on_delete=models.SET_NULL, null=True, blank=False)
+    kurum_ilce = ChainedForeignKey('ilce', chained_field="kurum_il", chained_model_field="ill", show_all=False, auto_choose=True,
+                                   sort=False, null=True, blank=False)
+    kurum_mahalle = ChainedForeignKey('mahalle', chained_field="kurum_ilce", chained_model_field='ilcee', show_all=False,
+                                    auto_choose=True, sort=False, null=True, blank=False)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = UserManager()
 
-    def geciciResimlerimiTemizle(self):
-        for x in self.ilanlarim():
-            x.geciciResimleriTemizle()
-
-    def ilan_temizligi(self):
-        ilan.objects.filter(sahip=self, silme_tarihi__isnull=False, yayinda=True).delete()
+    # def mesajNavBar_bilgileri_getir(self):
+    #     sonuc = list()
+    #     i = list(self.ilanlarim())
+    #     benimMesajlarim = Mesajlar.objects.filter(gonderen=self) | Mesajlar.objects.filter(ilgili_ilan__in=i)
+    #     sonuc.append(benimMesajlarim)
+    #     toplamSayi = benimMesajlarim.count()
+    #     gidenSayisi = benimMesajlarim.filter(gonderen=self).count()
+    #     sonuc.append(gidenSayisi)
+    #     gelenSayisi = toplamSayi - gidenSayisi
+    #     sonuc.append(gelenSayisi)
+    #     okunmamisSayisi = benimMesajlarim.filter(okundu=False).count()
+    #     sonuc.append(okunmamisSayisi)
+    #     okunmusSayisi = toplamSayi - okunmamisSayisi
+    #     sonuc.append(okunmusSayisi)
+    #     ilgili_ilanlar = list(benimMesajlarim.values('ilgili_ilan').distinct())
+    #     kurumlar = list(benimMesajlarim.values('gonderen').distinct())
+    #     xx = []
+    #     for x in ilgili_ilanlar:
+    #         xx.append([x['ilgili_ilan'], benimMesajlarim.filter(ilgili_ilanlar=x['ilgili_ilan']).count()])
+    #     # ilgili_ilanlar = zip(ilgili_ilanlar, xx)
+    #     sonuc.append(ilgili_ilanlar)
+    #     xx = []
+    #     for x in kurumlar:
+    #         xx.append(benimMesajlarim.filter(gonderen=x).count())
+    #     kurumlar = zip(kurumlar, xx)
+    #     sonuc.append(kurumlar)
+    #     return sonuc
 
     def ilanlarim(self):
         return ilan.objects.filter(sahip=self)
+
+    def favori_ilanlarım(self):
+        return favoriler.objects.filter(sahip=self)
 
     def mesajlar(self):
         m = []
@@ -111,32 +140,65 @@ class ilan(models.Model):
     yayinda = models.BooleanField(verbose_name='Yayında', default=True)
     olusturma_tarihi = models.DateField(auto_now=True, null=False, blank=False)
     silme_tarihi = models.DateField(null=True, blank=True)
-    kurum = models.CharField(max_length=100,null=True,blank=True)
+    kurum = models.CharField(max_length=200, null=True, blank=True)
     kucuk_resim = models.ImageField(upload_to='silinenilanlar', editable=False, blank=True, null=True)
 
+    def etiket_yazisi_getir(self):
+        if self.silme_tarihi is None:
+            return '<span style="font-weight: bold">' + self.ad + '</span>' + '<br><span style="font-size:smaller">'+self.sahip.kurum + '</span><br>' + '<span style="font-size: xx-small; font-weight: lighter">' + self.sahip.kurum_il.adi + ',' + self.sahip.kurum_ilce.adi + '</span>'
+        else:
+            return self.kurum
+
+    def ilan_sahip_bilgisi_getir(self):
+        if self.silme_tarihi is None:
+            return 'İlan Numarası: {}<br>Kurum: {}<br>Kurum İl/İlçe: {}/{}<br>Kurum Telefon: {}'.format(self.id,
+             self.sahip.kurum, self.sahip.kurum_il, self.sahip.kurum_ilce, self.sahip.kurum_telefon)
+
+        else:
+            return self.kurum
+
+    def ilan_bilgisi_getir(self):
+        return 'Kategori: {}<br>İlan Adı: {}<br>Adet: {}<br>Açıklama: {}'.format(self.kategori, self.ad, self.adet, self.aciklama)
+
+    def favorilerde(self, user):
+        try:
+            x = favoriler.objects.get(sahip=user, ilan=self)
+            if x is None:
+                return False
+            return True
+        except:
+            return False
+
+    def favorilere_ekle_cikar(self, user):
+        if self.favorilerde(user):
+            favoriler.objects.filter(sahip=user, ilan=self).delete()
+        else:
+            x = favoriler(sahip=user, ilan=self)
+            x.save()
+
     def sil(self):
-        self.kurum = self.sahip.kurum
+        self.kurum = self.etiket_yazisi_getir()
         self.sahip = None
         self.yayinda = False
         self.silme_tarihi = datetime.datetime.now()
         self.kucukResimOlustur(yazi='İlan Silinmiş')
-        Resim.objects.filter(ilan=self).delete()
+        try:
+            Resim.objects.filter(ilan=self).delete()
+        finally:
+            super(ilan, self).save()
+
+    # def delete(self, *args, **kwargs):
+    #     self.sil()
 
     def yayindami(self):
         return not self.silme_tarihi and self.yayinda
-
-    def delete(self, *args, **kwargs):
-        if self.silme_tarihi and self.yayinda:
-            super(ilan, self).delete(*args, **kwargs)
-        else:
-            self.sil()
 
     def yayindan_cek(self):
         self.yayinda = False
         self.kucukResimOlustur()
 
     def yayinla(self):
-        self.yayinda=True
+        self.yayinda = True
         self.kucuk_resim.delete(save=True)
 
     def kucukResimOlustur(self, yazi='Yayında Değil'):
@@ -144,13 +206,18 @@ class ilan(models.Model):
             self.kucuk_resim.delete(save=True)
 
         r = Resim.objects.filter(ilan=self).first()
-        image = Image.open(r.kucukResim)
+        if r is None:
+            d_ismi = 'ilan_{}.jpeg'.format(self.id)
+            image = Image.new('L', THUMB_SIZE, 'white')
+        else:
+            d_ismi = r.kucukResim.name
+            image = Image.open(r.kucukResim).convert('L')
 
         width, height = image.size
-        draw = ImageDraw.Draw(image).convert('L')
+        draw = ImageDraw.Draw(image)
         # .convert('L') ile gri tonlama yapıyoruz.
         text = yazi
-        font = ImageFont.truetype('arial.ttf', 33)
+        font = ImageFont.truetype('arial.ttf', 30)
         textwidth, textheight = draw.textsize(text, font)
 
         # calculate the x,y coordinates of the text
@@ -165,7 +232,7 @@ class ilan(models.Model):
 
         image.thumbnail(THUMB_SIZE, Image.ANTIALIAS)
 
-        thumb_name, thumb_extension = os.path.splitext(r.kucukResim.name)
+        thumb_name, thumb_extension = os.path.splitext(d_ismi)
         thumb_extension = thumb_extension.lower()
 
         thumb_filename = thumb_name + '_laMevcut' + thumb_extension
@@ -192,65 +259,53 @@ class ilan(models.Model):
     def __str__(self):
         return str(self.kategori) + ' - ' + str(self.ad)
 
-    def tum_resimleri_getir(self):
-        return Resim.objects.filter(ilan=self)
-
-    def silinmeyecek_resimler(self):
-        return Resim.objects.filter(ilan=self, silinecek=False)
+    def resimleri_getir(self):
+        if self.sahip:
+            return Resim.objects.filter(ilan=self)
+        else:
+            return None
 
     def resim_adet(self):
-        return Resim.objects.filter(ilan=self, silinecek=False).count()
+        return Resim.objects.filter(ilan=self).count()
 
     def mesajAdet(self):
-        return Mesajlar.objects.filter(ilan=self).count()
+        return Mesaj.objects.filter(ilgili_ilan=self).count()
 
     def okunmayanMesajAdet(self):
-        return Mesajlar.objects.filter(ilan=self, okundu=False).count()
+        return Mesaj.objects.filter(ilgili_ilan=self, okundu=False).count()
 
-    # def kacFavorideKayitli(self):
-    #     return favoriler.objects.filter(ilan=self).count()
-    #
+    # def silinecekleri_iptal_et(self):
+    #     Resim.objects.filter(ilan=self, silinecek=True).update(silinecek=False)
 
-    def geciciResimleriTemizle(self):
-        Resim.objects.filter(ilan=self, kayitli=False).delete()
-        Resim.objects.filter(ilan=self, silinecek=True).update(silinecek=False)
-
-    def geciciResimEkle(self, resim):
+    def resim_ekle(self, resim):
         try:
             x = Resim.objects.get(ilan=self, resim=resim)
         except:
-            self.resimekle(resim)
+            yeniresim = Resim()
+            yeniresim.ilan = self
+            yeniresim.resim = resim
+            # yeniresim.silinecek = False
+            yeniresim.save()
             return ""
         else:
-            if x.silinecek:
-                x.silinecek = False
-                return ""
-            else:
-                return "Bu resim zaten mevcut"
-
-    def resimekle(self, resim):
-        yeniresim = Resim()
-        yeniresim.ilan = self
-        yeniresim.resim = resim
-        yeniresim.kayitli = False
-        yeniresim.silinecek = False
-        yeniresim.save()
+            # if x.silinecek:
+            #     x.silinecek = False
+            #     return ""
+            # else:
+            return "Bu resim zaten mevcut"
 
     def mesajlar(self):
-        return Mesajlar.objects.filter(ilan=self)
+        return Mesaj.objects.filter(ilgili_ilan=self)
 
-    def save(self, *args, **kwargs):
-        if not(self.silme_tarihi and self.yayinda):
-            Resim.objects.filter(ilan=self, silinecek=True).delete()
-            Resim.objects.filter(ilan=self, kayitli=False).update(kayitli=True)
-        super(ilan, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     Resim.objects.filter(ilan=self, silinecek=True).delete()
+    #     super(ilan, self).save(*args, **kwargs)
 
 
 class Resim(models.Model):
     ilan = models.ForeignKey('ilan', on_delete=models.CASCADE, null=True)
     resim = models.ImageField(verbose_name='Resim', null=True)
-    kayitli = models.BooleanField(default=False)
-    silinecek = models.BooleanField(default=False)
+    # silinecek = models.BooleanField(default=False)
     kucukResim = models.ImageField(upload_to='thumbs', editable=False, blank=True, null=True)
 
     class Meta:
@@ -295,13 +350,9 @@ class Resim(models.Model):
     def __str__(self):
         return self.resim.name
 
-    def kaydet(self):
-        self.kayitli = True
-        self.silinecek = False
-
     def sil(self):
-        if self.ilan.resim_adet()>1:
-            self.silinecek = True
+        if self.ilan.resim_adet() > 1:
+            self.delete()
             return ""
         else:
             return "İlanda en az bir resim olmalıdır."
@@ -317,31 +368,70 @@ class KayitBekleyenler(models.Model):
                                          "'9999999999' veya '999 9999999' veya '999 999 9999' veya '999 999 99 99'. ")
     kurum_telefon = models.CharField(validators=[phone_regex], max_length=17, null=True, verbose_name='Kurum telefonu')  # validators should be a list
     kurum_web_adres = models.URLField(verbose_name='Kurum web adresi', null=True, blank=True)
+    kurum_il = models.ForeignKey('il', on_delete=models.PROTECT, null=True, blank=False)
+    kurum_ilce = ChainedForeignKey('ilce', chained_field="kurum_il", chained_model_field="ill", null=True,
+                                   blank=False)
+    kurum_mahalle = ChainedForeignKey('mahalle', chained_field="kurum_ilce", chained_model_field='ilcee',
+                                      show_all=False, null=True, blank=False)
 
     def __str__(self):
         return self.email
 
 
-yon_secimi = [('gelen', 'gelen'), ('giden', 'giden')]
-
-
-class Mesajlar(models.Model):
-    ilan = models.ForeignKey('ilan', null=False, blank=False, on_delete=models.CASCADE)
-    yon = models.CharField(max_length=5, null=False, blank=False, choices=yon_secimi, default='gelen')
-    mesaj_metni = models.TextField(blank=False, default='')
-    tarih = models.DateTimeField(auto_now_add=True)
+class Mesaj(models.Model):
+    gonderen_id = models.IntegerField(null=True, blank=False)
+    gonderilen_id = models.IntegerField(null=True, blank=False)
+    mesaj_metni = models.TextField(null=True, blank=False)
+    ilgili_ilan = models.ForeignKey('ilan', null=True, blank=True, on_delete=models.SET_NULL)
     okundu = models.BooleanField(default=False)
-
-    def kurum(self):
-        return self.sahip.kurum
+    silindi = models.IntegerField(null=True, blank=True, default=0)
+    tarih = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '{} ({})'.format(self.ilan.ad, self.yon)
+        return self.ilgili_ilan.ad
 
 
 class favoriler(models.Model):
-    sahip = models.ForeignKey('User', null=False, blank=False, on_delete=models.CASCADE)
-    ilan = models.ForeignKey('ilan', null=False, blank=False, on_delete=models.CASCADE)
+    sahip = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
+    ilan = models.ForeignKey(ilan, null=False, blank=False, on_delete=models.CASCADE)
 
 
+class il(models.Model):
+    adi = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.adi
+
+
+class ilce(models.Model):
+    ill = models.ForeignKey(il, on_delete=models.CASCADE)
+    adi = models.CharField(max_length=35)
+
+    def __str__(self):
+        return self.adi
+
+
+class mahalle(models.Model):
+    ilcee = models.ForeignKey(ilce, on_delete=models.CASCADE)
+    adi = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.adi
+
+
+class sikayet_nedenleri(models.Model):
+    neden = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.neden
+
+
+class sikayet(models.Model):
+    kim = models.ForeignKey('User', null=True, on_delete=models.SET_NULL)
+    hangi_ilan = models.ForeignKey('ilan', on_delete=models.PROTECT)
+    sikayet_nedeni = models.ForeignKey('sikayet_nedenleri', verbose_name='Şikayet Nedeni', on_delete=models.PROTECT, null=False, blank=False)
+    aciklama = models.TextField(blank=True, verbose_name='Açıklama')
+    tarih = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{}(İlan:{}, Kim:{})'.format(self.sikayet_nedeni, self.hangi_ilan, self.kim)

@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'dal',
+    # 'dal_select2',
+    # # 'grappelli',
+    'smart_selects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     #3. parti uygulamalar
     'django_cleanup',
     'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -83,7 +88,7 @@ WSGI_APPLICATION = 'kamu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'templates/../db.sqlite3'),
     }
 }
 
@@ -144,4 +149,7 @@ EMAIL_USE_TLS = True
 EMAIL_FROM = 'enesgulec@gmail.com'
 
 THUMB_SIZE = (200, 200)
+
+# JQUERY_URL = True
+# USE_DJANGO_JQUERY = False
 

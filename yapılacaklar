@@ -1,6 +1,21 @@
 1. bilgileri düzenle sayfasında bazı bilgiler yan yana olacak
-2. malzemeKartları her kart daha güzel bir görünüme getirilecek
-3. çıkan mesajlar beli bir süre sonra otomatik kapansın.
+
+2. ilan detay sayfasında resimler yatay scroll olacak şekilde görünsün
+
+3. çıkan mesajlar belli bir süre sonra otomatik kapansın.
+
 4. şifre unuttum işleminde e-postayı gönderen kişi enesgulec@gmail.com. yeni düzgün bir e-posta ayarlanacak
 
-5. user silinince onun ilanlarının sahip alanı null olacak.
+5. silme işleminde küçük resimde bir sıkıntı var.
+
+6. kategori dinamik olacak. yani alt kategorisi varsa kutucuk açılacak
+
+7.  şikayet bu gün içinde düzenleme yapılacak sonrasında düzenlenemeyecek.
+    her gün o ilan ile ilgili yanlız bir şikayet olabilecek
+
+sunucuda smart select i şu şekilde yükle
+pip install  git+https://github.com/digi604/django-smart-selects.git@js-unlinting-fixes
+
+yükledikten sonra
+https://github.com/jazzband/django-smart-selects/pull/272/commits/522d0d4fdbc7e7fec02c2d3b3e7251f40f2b911b
+bu adrese gir ve gereken düzeltmeleri yap

@@ -1,7 +1,7 @@
 from django import forms
 from app.models import *
 from app.models import User as userrr
-
+from smart_selects.form_fields import ChainedSelect
 
 
 class KayitFormu(forms.ModelForm):
@@ -21,7 +21,7 @@ class KayitFormu(forms.ModelForm):
 
     class Meta:
         model = KayitBekleyenler
-        fields = ['email', 'kurum', 'kurum_adres', 'kurum_telefon', 'kurum_web_adres']
+        fields = ['email', 'kurum', 'kurum_il', 'kurum_ilce', 'kurum_mahalle', 'kurum_telefon', 'kurum_web_adres']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -63,7 +63,7 @@ class BilgilerFormu(forms.ModelForm):
 
     class Meta:
         model = userrr
-        fields = ['email', 'first_name', 'last_name', 'kurum', 'kurum_telefon', 'kurum_adres', 'kurum_web_adres']
+        fields = ['email', 'first_name', 'last_name', 'kurum_telefon', 'kurum', 'kurum_il', 'kurum_ilce', 'kurum_mahalle', 'kurum_web_adres']
 
 
 class İlanFormu(forms.ModelForm):
@@ -96,20 +96,50 @@ class İlanFormu(forms.ModelForm):
 
 # Son çalışan hali
 class resimliİlanFormu(İlanFormu):
-    resim = forms.ImageField()
+    resim = forms.ImageField(required=False)
 
     class Meta(İlanFormu.Meta):
         fields = İlanFormu.Meta.fields + ['resim', ]
 
-    def __init__(self, gerekli=False, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['resim'].required = gerekli
 
-class resimFormu(forms.Form):
-    resim = forms.ImageField(required=False)
+class sikayetFormu(forms.ModelForm):
 
     class Meta:
-        fields = ['resim', ]
+        model = sikayet
+        widgets = {
+            'aciklama': forms.Textarea(attrs={'rows': 4}),
+        }
+        fields = ['sikayet_nedeni', 'aciklama']
+
+
+class mesajFormu(forms.ModelForm):
+
+    class Meta:
+        model = Mesaj
+        widgets = {
+            'mesaj_metni': forms.Textarea(attrs={'rows': 4}),
+        }
+        fields = ['mesaj_metni']
+
+
+
+
+
+
+
+
+
+
+
+    # def __init__(self, gerekli=False, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['resim'].required = gerekli
+
+# class resimFormu(forms.Form):
+#     resim = forms.ImageField(required=False)
+#
+#     class Meta:
+#         fields = ['resim', ]
 
 
 # class geciciResimFormu(forms.ModelForm):

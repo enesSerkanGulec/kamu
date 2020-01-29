@@ -1,0 +1,113 @@
+{% extends 'includes/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load favorikontrol %}
+{% block navbar %}
+    {% include 'includes/navbar.html' with islem=islem %}
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-xl-8 col-lg-7 col-md-7">
+        {% if resim_adet > 0 %}
+            <div id="ilan_inceleme_slider" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                  {% for resim in form.resimleri_getir %}
+                    <li data-target="#ilan_inceleme_slider" data-slide-to="{{ forloop.counter0}}" {% if forloop.counter0 == 0 %}class="active"{% endif %}></li>
+                  {% endfor %}
+              </ol>
+              <div class="carousel-inner">
+                  {% for resim in form.resimleri_getir %}
+                    <div class="carousel-item{% if forloop.counter0 == 0 %} active{% endif %}">
+                        <a href="{{ resim.resim.url }}"><img src="{{ resim.resim.url }}" class="d-block w-75" alt="..."></a>
+                    </div>
+                  {% endfor %}
+              </div>
+              <a class="carousel-control-prev" href="#ilan_inceleme_slider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#ilan_inceleme_slider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        {% else %}
+              <img src="{% static 'img/resim-yok.png' %}" class="d-block w-75 img-fluid">
+        {% endif %}
+        </div>
+
+        <div class="col-xl-4 col-lg-5 col-md-5">
+            <div class="card m-2 p-2"  style="background-color:lightyellow;height: 500px">
+                <div class="container d-block text-center">
+                    {% include 'includes/messages.html' %}
+                </div>
+                <div class="card-body" >
+                    {{ form.ilan_sahip_bilgisi_getir|safe }}
+                    <hr>
+                    {{ form.ilan_bilgisi_getir|safe }}
+
+                    <div class="card-footer text-center" style="bottom: 0;left: 0; position: absolute; width: 100%; font-size: x-large">
+                        <a href="{% if nereden == 'anasayfa' %}{% url 'anasayfaislemi' %}{% else %}{% url 'favoriislemi' %}{% endif %}" class="card-link" title="{% if nereden == 'anasayfa' %}Ana sayfaya geri dön{% else %}Favorilerime geri dön{% endif %}">
+                        <span class="fa fa-backward" style="color: black"></span></a>
+                        <a href="{% url 'ilan_inceleme_favori' form.id 'favori' %}" class="card-link" title="Favorilerim{% if form|favorilerde_mevcut_mu:sahip %}den çıkar{% else %}e ekle{% endif %}">
+                        <span class="fa fa-heart{% if not form|favorilerde_mevcut_mu:sahip %}-o{% endif %}" style="color: {% if form|favorilerde_mevcut_mu:sahip %}red{% else %}black{% endif %}"></span></a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#mesajpenceresi" title="Mesaj gönder">
+                        <span class="fa fa-envelope-o" style="color: black"></span></a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#şikayetpenceresi" title="Şikayet Et" style="font-size: small">
+                        <span class="fa fa-flag" style="color: #9d261d"></span> Şikayet Et</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <form method="post">
+    {% csrf_token %}
+        <div class="modal fade text-left" id="mesajpenceresi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mesaj gönder..</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        {{ mesaj_formu|crispy }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                        <button type="submit" class="btn btn-primary" name="mesaj">Mesaj gönder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form method="post">
+    {% csrf_token %}
+        <div class="modal fade text-left" id="şikayetpenceresi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Şikayet kaydı oluştur..</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        {{ sikayet_formu|crispy }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                        <button type="submit" class="btn btn-danger" name="sikayet">Şikayet kaydı oluştur</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

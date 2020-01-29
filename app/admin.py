@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 from django.db.models import Sum
 from django.utils.translation import ugettext_lazy as _
+from smart_selects.db_fields import ChainedForeignKey
 
 from .models import *
 
@@ -11,10 +12,11 @@ class UserAdmin(DjangoUserAdmin):
     """Define admin model for custom User model with no email field."""
 
     fieldsets = (
-        (None, {'fields': ('email',)}),
+        (_('email'), {'fields': ('email',)}),
         #, 'password')}),
         (_('Personal info'), {'fields': ('first_name', 'last_name')}),
-        (_('Kurum Bilgileri'), {'fields': ('kurum', 'kurum_telefon', 'kurum_web_adres', 'kurum_adres')}),
+        (_('Kurum Bilgileri'), {'fields': ('kurum', 'kurum_telefon', 'kurum_web_adres')}),
+        (_('Kurm Adres Bilgileri'), {'fields': ('kurum_il', 'kurum_ilce', 'kurum_mahalle')}),
         #(_('Malzemeler'), {('_malzemeler')}),
         (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser')}),
                                        #,'groups', 'user_permissions')}),
@@ -74,14 +76,29 @@ class ResimAdmin(admin.ModelAdmin):
 
 
 class MesajAdmin(admin.ModelAdmin):
-    list_display = ('yon', 'ilan', 'mesaj_metni', 'tarih', 'okundu')
+    list_display = ('ilgili_ilan', 'mesaj_metni', 'okundu', 'silindi')
 
     class Meta:
-        model = Mesajlar
+        model = Mesaj
+
+class SikayetNedenleriAdmin(admin.ModelAdmin):
+    list_display = ['neden']
+
+    class Meta:
+        model = sikayet_nedenleri
+
+class SikayetlerAdmin(admin.ModelAdmin):
+    list_display = ['kim', 'hangi_ilan', 'sikayet_nedeni', 'tarih']
+    list_display_links = ['sikayet_nedeni']
+
+    class Meta:
+        model = sikayet
 
 
 admin.site.register(ilan, ilanAdmin)
 admin.site.register(Kategori, KategoriAdmin)
 admin.site.register(Resim, ResimAdmin)
 admin.site.register(KayitBekleyenler)
-admin.site.register(Mesajlar, MesajAdmin)
+admin.site.register(Mesaj, MesajAdmin)
+admin.site.register(sikayet_nedenleri, SikayetNedenleriAdmin)
+admin.site.register(sikayet, SikayetlerAdmin)

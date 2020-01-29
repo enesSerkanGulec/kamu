@@ -1,6 +1,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="font-family:Laksaman">
+<nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top" style="font-family:Laksaman">
 {#  <a class="navbar-brand" data-toggle="collapse" data-target=".navbar-collapse" data-placement="bottom">#}
 {#      MENÜ#}
 {#  </a>#}
@@ -13,11 +13,11 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="{% url 'anasayfaislemi' %}" data-target=".navbar-collapse" data-placement="bottom"
-         {% if islem == 'anasayfa' %}style="font-size: large; font-weight: bold"{% endif %}>Ana Sayfa</a>
+         {% if islem == 'anasayfa' %}style="font-size: large; font-weight: bold;"{% endif %}>Ana Sayfa</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" data-target=".navbar-collapse" data-placement="bottom"
-        {% if islem == 'favoriler' %}style="font-size: large; font-weight: bold"{% endif %}>
+        <a class="nav-link" href="{% url 'favoriislemi' %}" data-target=".navbar-collapse" data-placement="bottom"
+        {% if islem == 'favorilerim' %}style="font-size: large; font-weight: bold"{% endif %}>
             Favoriler
         </a>
       </li>
@@ -28,7 +28,7 @@
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="#" data-target=".navbar-collapse"  data-placement="bottom"
+        <a class="nav-link" href="{% url 'mesajlarimislemi' %}" data-target=".navbar-collapse"  data-placement="bottom"
         {% if islem == 'mesajlar' %}style="font-size: large; font-weight: bold"{% endif %}>
             Mesajlar
         </a>
@@ -37,7 +37,7 @@
     <fieldset {% if islem is None %} disabled {% endif %} >
         <div class="form-inline form-group my-2">
             <input class="form-control col-md-8 col-sm-8 col-xs-8" type="search" placeholder="Aranan ..." aria-label="Ara">
-            <button class="btn btn-primary ml-1 col-md-3 col-sm-3 col-xs-3 disabled" type="submit">Ara</button>
+            <button class="btn btn-primary ml-1 col-md-3 col-sm-3 col-xs-3" type="submit">Ara</button>
         </div>
     </fieldset>
     <div class="btn-group dropdown">

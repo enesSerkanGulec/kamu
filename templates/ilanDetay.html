@@ -11,24 +11,61 @@
         <div class="container my-4 py-3">
     {#            <div class="form-row text-center">{% include 'includes/messages.html' %}</div>#}
             <div class="row">
-                <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-                    <div class="row d-block">{% include 'includes/messages.html' %}</div>
+                <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+                    <div class="row d-block text-center">{% include 'includes/messages.html' %}</div>
                     <div class="form-row">
                         <div class="col" style="width: 100px">
-                            <a href="" class="card-link" data-toggle="modal" {% if resimAdet < 4 %} data-target="#resimekleme" {% else %} style="color: grey" {% endif %}
-                               title="Resim Ekle">
-                                <span class="fa fa-image" style="font-size: 100px"></span>
-                            </a>
+
 {#                            # MODAL burada idi#}
                         </div>
 
                         <div class="col-md-auto col-lg-auto">
                             <div class="container" >
                                 <div class="row text-center" >
-                                    {% for resim in resimler %}
-                                        <div class="col-xs-4 m-1 p-1 alert-success" >
-                                            <img href="" src="{{ resim.resim.url }}" class="img-fluid" width="100" height="100" >
+                                    <div class="card m-1"  style="width: 10rem; height: 13rem; background-color:white">
+                                        <div class="card-body" >
+                                            <a href="" class="card-link" data-toggle="modal" {% if resimAdet < 9 %} data-target="#resimekleme" {% else %} style="color: grey" {% endif %}
+                                                title="Resim Ekle">
+                                                <span class="fa fa-image" style="font-size: 100px"></span>
+                                            </a>
                                         </div>
+                                    </div>
+                                    {% for resim in resimler %}
+                                            <div class="card m-1"  style="width: 10rem; height: 13rem; background-color:white">
+                                                <div class="card-body" >
+{#                                                    <a href="{{ resim.resim.url }}" title="Görüntüle" >#}
+                                                        <img href="{{ resim.resim.url }}" src="{{ resim.resim.url }}" class="img-fluid" width="130" height="130" >
+{#                                                    </a>#}
+                                                    <div class="card-footer text-center" style="bottom: 0;left: 0; position: absolute; width: 100%; font-size: x-large">
+                                                        <a href="{{ resim.resim.url }}" class="card-link" title="Görüntüle">
+                                                            <span class="fa fa-wpexplorer" style="color: black; font-size: xx-large"></span></a>
+                                                        <a href="#" class="card-link" data-toggle="modal" data-target="#resimSilme{{ resim.id }}" title="Sil">
+                                                            <span class="fa fa-trash-o" style="color: black"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade text-left" id="resimSilme{{ resim.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                                <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Dikkat!! Resim silinecek!!</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Seçili resmi silmek istiyor musunuz?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                                                        <button type="submit" class="btn btn-danger"  name="btn" value="resimsil;{{ resim.id }}">Sil</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+{#                                        </div>#}
                                     {% endfor %}
                                 </div>
                             </div>
@@ -79,7 +116,7 @@
                                         </div>
                                         <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
-                                                <button type="submit" class="btn btn-success"  name="btn" value="resim">Resmi Ekle</button>
+                                                <button type="submit" class="btn btn-success"  name="btn" value="resimekle">Resmi Ekle</button>
                                         </div>
                                     </div>
                                 </div>

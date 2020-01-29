@@ -1,16 +1,29 @@
 {% load static %}
-        <div class="card m-2 p-2"  style="width: 15rem; height: 25rem; background-color: {% if f.yayinda %}white{% else %}lightgrey{% endif %}">
-            <div class="container align-content-center"> {% include 'includes/slide.html' with resimler=f.silinmeyecek_resimler kucuk_resim=f.kucuk_resim yayinda=f.yayindami ilan_id=f.id %}</div>
-
-            <div class="card-body" >
+{% load crispy_forms_tags %}
+{% load favorikontrol %}
+    <div class="card m-2 p-2"  style="width: 15rem; height: 25rem; background-color: {% if islem == 'favorilerim' and f.ilan.yayinda or f.yayinda %}{% if f.ilan.sahip == sahip or f.sahip == sahip %}lightyellow{% else %} white {% endif %}{% else %}lightgrey{% endif %}">
+        <div class="container align-content-center">
+            {% if islem == 'favorilerim' %}
+                {% include 'includes/slide.html' with resimler=f.ilan.resimleri_getir kucuk_resim=f.ilan.kucuk_resim yayinda=f.ilan.yayindami ilan_id=f.ilan.id %}
+            {% else %}
+                {% include 'includes/slide.html' with resimler=f.resimleri_getir kucuk_resim=f.kucuk_resim yayinda=f.yayindami ilan_id=f.id %}
+            {% endif %}
+        </div>
+        <div class="card-body" >
             <br>
+            {% if islem == 'ilanlarım' %}
                 <h6>{{ f.ad }}</h6>
 {#                <h6 class="card-subtitle mb-2 text-muted">{% if f.kategori != None %} {{ f.kategori }} {% else %} <br> {% endif %}</h6>#}
                 <p class="card-text" style="font-size: small">{{ f.adet }} adet</p>
+            {% elif islem == 'favorilerim' %}
+                {{ f.ilan.etiket_yazisi_getir|safe }}
+            {% else %}
+                {{ f.etiket_yazisi_getir|safe }}
+            {% endif %}
 
-                <div class="card-footer text-center" style="bottom: 0;left: 0; position: absolute; width: 100%; font-size: x-large">
+            <div class="card-footer text-center" style="bottom: 0;left: 0; position: absolute; width: 100%; font-size: x-large">
 
-
+                {% if islem == 'ilanlarım' %}
                     <a href="{% url 'ilandetayislemi' f.id %}" class="card-link" title="Düzenle">
                         <span class="fa fa-edit" style="color: black"></span></a>
                     <a href="#" class="card-link" data-toggle="modal" data-target="#silmesorgusu{{ f.id }}" title="Sil">
@@ -25,58 +38,103 @@
                             {% if f.okunmayanMesajAdet > 0 %} <sup> <span class="badge badge-light" style="font-size: x-small;color: red">{{ f.okunmayanMesajAdet }}</span></sup> {% endif %}
                         </a>
                     {% endif %}
+                {% elif islem == 'anasayfa' %}
 
-                </div>
+                    <a href="{% url 'ilan_inceleme' f.id islem %}" class="card-link" title="İncele">
+                        <span class="fa fa-search-plus" style="color: black"></span></a>
 
+                    <a href="{% url 'islemler' f.id 'favorieklecikar' %}" class="card-link" title="Favorilerim{% if f|favorilerde_mevcut_mu:sahip %}den çıkar{% else %}e ekle{% endif %}">
+                        <span class="fa fa-heart{% if not f|favorilerde_mevcut_mu:sahip %}-o{% endif %}" style="color: {% if f|favorilerde_mevcut_mu:sahip %}red{% else %}black{% endif %}"></span></a>
+
+                    <a href="" class="card-link" data-toggle="modal" data-target="#anasayfamesajpenceresi{{ f.id }}" title="Mesaj gönder">
+                        <span class="fa fa-envelope-o" style="color: black"></span></a>
+
+                {% elif islem == 'favorilerim' %}
+
+                    <a href="{% url 'ilan_inceleme' f.ilan.id islem %}" class="card-link" title="İncele">
+                        <span class="fa fa-search-plus" style="color: black"></span></a>
+                    <a href="{% url 'favoricikar' f.id 'favoricikar' %}" class="card-link" title="Favorilerimden çıkar">
+                        <span class="fa fa-heart" style="color: red"></span></a>
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#favorilermesajpenceresi{{ f.ilan.id }}" title="Mesaj gönder">
+                        <span class="fa fa-envelope-o" style="color: black"></span></a>
+
+                {% endif %}
             </div>
+
         </div>
+    </div>
 
-                    <div class="modal fade text-left" id="yayinlamasorgusu{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">İlan sorgusu </h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    {% if f.kategori != None %} {{ f.kategori }} kategorisindeki{% endif %}<br>
-                                    <span style="font-weight: bold">{{ f.ad }} </span>ilanı {% if f.yayinda %}yayından kaldırılacak{% else %}yayına alınacak{% endif %}
-                                    <br> <br> Devam edilsin mi?
-                                </div>
-                                <div class="modal-footer">
-                                    <form method="post">
-                                        {% csrf_token %}
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
-                                        <button type="submit" class="btn btn-{% if f.yayinda %}warning{% else %}success{% endif %}"  name="ilan" value="yayinla;{{ f.id }}">{% if f.yayinda %}Yayından kaldır{% else %}Yayınla{% endif %}</button>
-                                    </form>
-                                </div>
-                            </div>
+        <form method="post">
+        {% csrf_token %}
+            <div class="modal fade text-left" id="{% if islem == 'favorilerim' %}favorilermesajpenceresi{{ f.ilan.id }}{% elif islem == 'anasayfa' %}anasayfamesajpenceresi{{ f.id }}{% endif %}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Mesaj gönder..</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            Gönderilen: {% if islem == 'favorilerim' %}{{ f.ilan.sahip.kurum }}{% elif islem == 'anasayfa' %} {{ f.sahip.kurum }}{% endif %}
+                            {{ mesaj_formu|crispy }}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn btn-primary" name="mesaj" value="{% if islem == 'favorilerim' %}{{ f.ilan.id }}{% elif islem == 'anasayfa' %}{{ f.id }}{% endif %}">Mesaj gönder</button>
                         </div>
                     </div>
-                    <div class="modal fade text-left" id="silmesorgusu{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Dikkat!! İlan silinecek!!</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    {% if f.kategori != None %} {{ f.kategori }} kategorisindeki{% endif %}<br>
-                                    <span style="font-weight: bold">{{ f.ad }} </span>ilanı silinecek !!
-                                    <br> <br> Devam edilsin mi?
-                                </div>
-                                <div class="modal-footer">
-                                    <form method="post">
-                                        {% csrf_token %}
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
-                                        <button type="submit" class="btn btn-danger"  name="ilan" value="sil;{{ f.id }}">Sil</button>
-                                    </form>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        </form>
+
+        <form method="post">
+        {% csrf_token %}
+            <div class="modal fade text-left" id="yayinlamasorgusu{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">İlan sorgusu </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            {% if f.kategori != None %} {{ f.kategori }} kategorisindeki{% endif %}<br>
+                            <span style="font-weight: bold">{{ f.ad }} </span>ilanı {% if f.yayinda %}yayından kaldırılacak{% else %}yayına alınacak{% endif %}
+                            <br> <br> Devam edilsin mi?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn btn-{% if f.yayinda %}warning{% else %}success{% endif %}"  name="ilan" value="yayinla;{{ f.id }}">{% if f.yayinda %}Yayından kaldır{% else %}Yayınla{% endif %}</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </form>
 
+        <form method="post">
+        {% csrf_token %}
+            <div class="modal fade text-left" id="silmesorgusu{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Dikkat!! İlan silinecek!!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            {% if f.kategori != None %} {{ f.kategori }} kategorisindeki{% endif %}<br>
+                            <span style="font-weight: bold">{{ f.ad }} </span>ilanı silinecek !!
+                            <br> <br> Devam edilsin mi?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn btn-danger"  name="ilan" value="sil;{{ f.id }}">Sil</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
