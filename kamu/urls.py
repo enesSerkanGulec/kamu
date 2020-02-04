@@ -23,9 +23,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('chaining/', include('smart_selects.urls')),
-    # path('__debug__/', include(debug_toolbar.urls)),
     path('logout/', views.logoutt, name='cikisislemi'),
-    path('profil/', include('app.urls')),
     path('', views.welcomeislemi),
     path('', views.welcomeislemi, name='girisislemi'),
     path('welcome/<int:islem>/', views.welcomeislemi, name='karsilamaislemi'),
@@ -40,6 +38,8 @@ urlpatterns = [
     path('iller/', views.il_ilce_veritanamını_aktar),
     path('ilan_inceleme/<int:id>/<str:islem>', views.ilan_incele, name='ilan_inceleme'),
     path('ilan/<int:id>/<str:islem>', views.ilan_incele, name='ilan_inceleme_favori'),
-    path('mesajlarim/', views.mesajlarim, name='mesajlarimislemi')
+    path('mesajlarim/<str:filitre>', views.mesajlarim, name='mesajlarimislemi'),
+    path('mesajlarim/', views.mesajlarim, name='tummesajlarimislemi'),
+    path('mesajlarim/<str:filitre>/<int:id>/<str:islem>', views.mesajlarim, name='mesajdaislemyap'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

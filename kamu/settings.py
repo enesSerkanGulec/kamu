@@ -31,9 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 'dal',
-    # 'dal_select2',
-    # # 'grappelli',
     'smart_selects',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,7 +43,6 @@ INSTALLED_APPS = [
     #3. parti uygulamalar
     'django_cleanup',
     'crispy_forms',
-
 ]
 
 MIDDLEWARE = [
@@ -82,9 +78,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'kamu.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -92,9 +85,6 @@ DATABASES = {
     }
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -131,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ] #sunucu tarafında iptal
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') # sunucu tarafında aktif edilecek ('python manage.py collectstatic' yapılacak)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') # sunucu tarafında aktif edilecek ('python manage.py collectstatic' yapılacak)
 
 AUTH_USER_MODEL = 'app.User'
 

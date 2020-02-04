@@ -28,7 +28,7 @@
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="{% url 'mesajlarimislemi' %}" data-target=".navbar-collapse"  data-placement="bottom"
+        <a class="nav-link" href="{% url 'tummesajlarimislemi' %}" data-target=".navbar-collapse"  data-placement="bottom"
         {% if islem == 'mesajlar' %}style="font-size: large; font-weight: bold"{% endif %}>
             Mesajlar
         </a>
@@ -42,7 +42,7 @@
     </fieldset>
     <div class="btn-group dropdown">
         <a  role="button" class="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ user }}">
-            <img src="{% static 'img/user.png' %}">
+            <span class="fa fa-user-circle-o" style="font-size: 40px"></span>
         </a>
         <div class="dropdown-menu dropdown-menu-md-left dropdown-menu-lg-right dropdown-menu-sm-left dropdown-menu-xl-right" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" style="font-weight: bold" href="{% url 'cikisislemi' %}">Çıkış</a>

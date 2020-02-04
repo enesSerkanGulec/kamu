@@ -1,0 +1,4 @@
+django
+django-cleanup
+django-crispy-forms
+git+https://github.com/digi604/django-smart-selects.git@js-unlinting-fixes

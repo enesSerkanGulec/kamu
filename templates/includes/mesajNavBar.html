@@ -1,39 +1,41 @@
 {% load static %}
-<ul class="nav">
+{% load mesajlarFilitre_islemleri %}
+<ul class="nav navbar-fixed-top" style="background-color: lightcyan; font-size: small">
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Durum..</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" {% if f|degerGetir:'ilgili' != '' %}style="font-weight: bold;color: darkred"{% endif %} aria-expanded="false">İlgili{{ f|degerGetir:'ilgili' }}</a>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Tümü</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'ilgili:Hepsi' %}">Hepsi</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Okunmamış</a>
-        <a class="dropdown-item" href="#">Okunmuş</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'ilgili:kurum' %}">Kurum</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'ilgili:ilan' %}">İlan</a>
     </div>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nereden..</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" {% if f|degerGetir:'yon' != '' %}style="font-weight: bold;color: darkred"{% endif %} aria-expanded="false">Yön{{ f|degerGetir:'yon' }}</a>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Tümü</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'yon:Hepsi' %}">Hepsi</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Gelen</a>
-        <a class="dropdown-item" href="#">Giden</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'yon:giden' %}">Giden</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'yon:gelen' %}">Gelen</a>
     </div>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">İlan..</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" {% if f|degerGetir:'durum' != '' %}style="font-weight: bold;color: darkred"{% endif %} aria-expanded="false">Durum{{ f|degerGetir:'durum' }}</a>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Tümü</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'durum:Hepsi' %}">Hepsi</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">İlan 1</a>
-        <a class="dropdown-item" href="#">İlan 2</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'durum:okunmadi' %}">Okunmadı</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'durum:okundu' %}">Okundu</a>
     </div>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kime..</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" {% if f|degerGetir:'zaman' != '' %}style="font-weight: bold;color: darkred"{% endif %} aria-expanded="false">Zaman{{ f|degerGetir:'zaman' }}</a>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Tümü</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'zaman:Hepsi' %}">Hepsi</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Gelen</a>
-        <a class="dropdown-item" href="#">Giden</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'zaman:bugün' %}">Bugün</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'zaman:buhafta' %}">Bu Hafta</a>
+        <a class="dropdown-item" href="{% url 'mesajlarimislemi' f|yeni_filitre_olustur:'zaman:buay' %}">Bu Ay</a>
     </div>
   </li>
 </ul>

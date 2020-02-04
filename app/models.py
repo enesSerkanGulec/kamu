@@ -6,11 +6,14 @@ from django.utils.translation import ugettext_lazy as _
 from PIL import Image, ImageDraw, ImageFont
 import os
 import datetime
+from datetime import timedelta
+from django.db.models import F
 from django.core.files.base import ContentFile
 # from django.core.files.storage import default_storage as storage
 from kamu.settings import THUMB_SIZE
 from io import BytesIO
 from smart_selects.db_fields import ChainedForeignKey
+from django.db.models import Q
 
 
 class UserManager(BaseUserManager):
@@ -68,7 +71,8 @@ class User(AbstractUser):
     REQUIRED_FIELDS = []
     objects = UserManager()
 
-    # def mesajNavBar_bilgileri_getir(self):
+    def mesajNavBar_bilgileri_getir(self):
+        pass
     #     sonuc = list()
     #     i = list(self.ilanlarim())
     #     benimMesajlarim = Mesajlar.objects.filter(gonderen=self) | Mesajlar.objects.filter(ilgili_ilan__in=i)
@@ -99,7 +103,7 @@ class User(AbstractUser):
     def ilanlarim(self):
         return ilan.objects.filter(sahip=self)
 
-    def favori_ilanlarım(self):
+    def favori_ilanlarim(self):
         return favoriler.objects.filter(sahip=self)
 
     def mesajlar(self):
@@ -274,9 +278,6 @@ class ilan(models.Model):
     def okunmayanMesajAdet(self):
         return Mesaj.objects.filter(ilgili_ilan=self, okundu=False).count()
 
-    # def silinecekleri_iptal_et(self):
-    #     Resim.objects.filter(ilan=self, silinecek=True).update(silinecek=False)
-
     def resim_ekle(self, resim):
         try:
             x = Resim.objects.get(ilan=self, resim=resim)
@@ -390,6 +391,78 @@ class Mesaj(models.Model):
     def __str__(self):
         return self.ilgili_ilan.ad
 
+    def sil(self, user_id):
+        if self.gonderen_id == user_id: #Giden mesaj
+            if self.silindi in [0, 2]:
+                self.silindi = self.silindi + 1
+
+        if self.gonderilen_id == user_id: #Gelen Mesaj
+            if self.silindi in [0, 1]:
+                self.silindi = self.silindi + 2
+
+        self.save()
+
+        if self.silindi == 3:
+            self.delete()
+
+
+    def gonderenKim(self, ben_id):
+        if self.gonderen_id == ben_id:
+            return 'Ben'
+        else:
+            try:
+                x = User.objects.get(id=self.gonderen_id)
+                return x.kurum
+            except:
+                return 'Gönderen Silinmiş'
+
+    def gonderilenKim(self, ben_id):
+        if self.gonderilen_id == ben_id:
+            return 'Ben'
+        else:
+            try:
+                x = User.objects.get(id=self.gonderilen_id)
+                return x.kurum
+            except:
+                return 'Gönderilen Silinmiş'
+
+    def mesaj_getir(sahip, filtre):
+        ilgi = yon = durum = zaman = ""
+        x = filtre.split('-')
+        ilgi = x[0].split(':')[1]
+        yon = x[1].split(':')[1]
+        durum = x[2].split(':')[1]
+        zaman = x[3].split(':')[1]
+
+        s = Mesaj.objects.filter((Q(gonderilen_id=sahip.id) & Q(silindi__in=[0, 1])) | (Q(gonderen_id=sahip.id) & Q(silindi__in=[0, 2])))
+
+        if ilgi == 'kurum':
+            s = s.filter(ilgili_ilan__isnull=True)
+        elif ilgi == 'ilan':
+            s = s.filter(ilgili_ilan__isnull=False)
+
+        if yon == 'giden':
+            s = s.filter(gonderen_id=sahip.id)
+        elif yon == 'gelen':
+            s = s.filter(gonderilen_id=sahip.id)
+
+        if durum == 'okunmadi':
+            s = s.filter(okundu=False)
+        elif durum == 'okundu':
+            s = s.filter(okundu=True)
+
+        bugun_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
+        if zaman == 'bugun':
+            bugun_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
+            s = s.filter(tarih__range=(bugun_min, bugun_max))
+        elif zaman == 'buhafta':
+            buhafta_max = bugun_min + timedelta(weeks=1)
+            s = s.filter(tarih__range=(bugun_min, buhafta_max))
+        elif zaman == 'buay':
+            buay_max = bugun_min + timedelta(days=30)
+            s = s.filter(tarih__range=(bugun_min, buay_max))
+
+        return s
 
 class favoriler(models.Model):
     sahip = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)

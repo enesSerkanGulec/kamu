@@ -2,139 +2,1051 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71458b19-df85-4972-b36a-dc2b7820becc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Mahalle.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0002_auto_20200115_1601.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0003_auto_20200116_0941.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0004_auto_20200116_1308.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0005_sikayet_nedenleri.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0006_auto_20200121_0013.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0007_sikayet_aciklama.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0008_auto_20200121_0115.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0009_auto_20200121_0914.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0010_auto_20200122_0304.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0011_mesaj_mesajhareketleri.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0012_auto_20200129_0045.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0013_auto_20200129_0059.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0014_auto_20200129_1642.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0015_auto_20200129_1643.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templatetags/favorikontrol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ilceler.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iller.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/acer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/adaptör.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/adaptör_umZzMUu.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/adaptör_thumb_6zd52tv_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/büromasa_thumb_laMevcut.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/büromasa_thumb_laMevcut_cCJSo9E.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sandalye_thumb_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sandalye_thumb_laMevcut_jSf10xE.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sunta_thumb_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/sunta_thumb_laMevcut_bMLczF0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/telsiz1_thumb_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/telsiz_thumb_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/öğrencimasa_thumb_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/telsiz.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/telsiz1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/telsiz1_4jmJM2v.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/telsiz_hUCKeQ5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/acer_thumb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/adaptör_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/adaptör_thumb_jaLQEJB.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz1_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz1_thumb_y6HksLV.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz_thumb_A692qVL.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/öğrencimasa_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/öğrencimasa_thumb_sfOSFQs.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/öğrencimasa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/öğrencimasa_DMTsY9z.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ilan_inceleme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/includes/mesajNavBar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/mesajlar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/yeniilan.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_smart_selects-1.5.4-py3.7.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six-1.14.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/six.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/db_fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/form_fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/static/smart-selects/admin/js/bindfields.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/static/smart-selects/admin/js/chainedfk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/static/smart-selects/admin/js/chainedm2m.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/smart_selects/widgets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/chained_m2m_select.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/chained_select.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/grouped_select.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/fixtures/user.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0002_book1_location1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0003_auto_20160129_1531.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0004_auto_20170309_0016.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0004_client_domain_website.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0005_merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/0006_auto_20170707_2000.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/test_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e289f354-bf71-4fb7-8bf9-0d33a6e2727b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e289f354-bf71-4fb7-8bf9-0d33a6e2727b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/adaptör_1HsBimy.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/büromasa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/pcmasa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/saat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sandalye.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/telsiz1_thumb_o4Vy1Co_laMevcut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sunta.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/telsiz1_ORo28BE.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/telsiz_yUIhsSa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/adaptör_thumb_95Ayazf.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/büromasa_thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/pcmasa_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/saat_thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/sandalye_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/sunta_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz1_thumb_9gtMJVB.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz_thumb_X45tHSP.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/thumbs/öğrencimasa_thumb_FDGlTHo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/öğrencimasa_9KW8QFj.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/changelists.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/responsive_rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/widgets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/Roboto-Bold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/Roboto-Light-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/Roboto-Regular-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/calendar-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-addlink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-alert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-changelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-deletelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-no.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-viewlink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-yes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/selector-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/sorting-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-arrowright.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/cancel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/change_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/inlines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/popup_response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/urlify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/select2.full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/archive.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap-3.1.1/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap3.4.1/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/css/font-awesome.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/CNAME" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/css/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/css/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/css/font-awesome-ie7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/css/font-awesome-ie7.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/font/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/font/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/font/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/font/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/font/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/extras.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/font-awesome-ie7.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_extras.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/font-awesome-ie7.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/ico/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/img/contribution-sample.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/img/fort_awesome.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/img/glyphicons-halflings-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/img/glyphicons-halflings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/img/icon-flag.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/ZeroClipboard-1.1.7.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/ZeroClipboard-1.1.7.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/backbone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/bootstrap-2.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/bootstrap-222.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/js/underscore.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/accordion.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/breadcrumbs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/button-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/close.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/component-animations.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/dropdowns.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/hero-unit.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/labels-badges.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/layouts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/media.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/navs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/pager.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/popovers.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/progress-bars.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/reset.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/responsive-1200px-min.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/responsive-767px-max.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/responsive-768px-979px.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/responsive-navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/responsive-utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/responsive.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/scaffolding.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/sprites.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/tables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/thumbnails.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/bootstrap-2.3.2/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/lazy.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/responsive-1200px-min.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/responsive-767px-max.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/responsive-768px-979px.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/responsive-navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/responsive.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/site.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/sticky-footer.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/assets/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/cheatsheet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/community/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/design.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/examples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/get-started/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/adjust/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/adn/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/align-center/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/align-justify/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/align-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/align-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ambulance/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/anchor/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/android/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/angle-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/angle-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/angle-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/angle-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/apple/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/archive/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/arrow-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/arrow-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/arrow-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/arrow-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/asterisk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/backward/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ban-circle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bar-chart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/barcode/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/beaker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/beer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bell-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bell/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bitbucket-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bitbucket/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bold/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bolt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/book/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bookmark-empty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bookmark/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/briefcase/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/btc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bug/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/building/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bullhorn/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/bullseye/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/calendar-empty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/calendar/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/camera-retro/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/camera/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/caret-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/caret-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/caret-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/caret-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/certificate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/check-empty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/check-minus/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/check-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/check/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-sign-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-sign-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-sign-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-sign-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/chevron-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/circle-arrow-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/circle-arrow-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/circle-arrow-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/circle-arrow-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/circle-blank/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/circle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cloud-download/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cloud-upload/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cloud/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cny/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/code-fork/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/code/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/coffee/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cogs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/collapse-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/collapse-top/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/collapse/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/columns/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/comment-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/comment/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/comments-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/comments/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/compass/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/copy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/credit-card/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/crop/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/css3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/cut/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/dashboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/desktop/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/double-angle-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/double-angle-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/double-angle-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/double-angle-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/download-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/download/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/dribbble/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/dropbox/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/edit-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/edit/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/eject/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ellipsis-horizontal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ellipsis-vertical/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/envelope-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/envelope/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/eraser/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/eur/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/exchange/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/exclamation-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/exclamation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/expand-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/expand/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/external-link-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/external-link/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/eye-close/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/eye-open/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/facebook-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/facebook/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/facetime-video/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/fast-backward/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/fast-forward/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/female/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/fighter-jet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/file-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/file-text-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/file-text/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/file/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/film/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/filter/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/fire-extinguisher/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/fire/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/flag-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/flag-checkered/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/flag/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/flickr/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/folder-close-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/folder-close/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/folder-open-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/folder-open/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/font/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/food/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/forward/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/foursquare/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/frown/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/fullscreen/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/gamepad/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/gbp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/gift/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/github-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/github-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/github/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/gittip/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/glass/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/globe/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/google-plus-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/google-plus/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/group/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/h-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/hand-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/hand-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/hand-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/hand-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/hdd/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/headphones/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/heart-empty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/heart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/home/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/hospital/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/html5/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/inbox/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/indent-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/indent-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/info-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/info/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/inr/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/instagram/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/italic/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/jpy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/key/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/keyboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/krw/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/laptop/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/leaf/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/legal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/lemon/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/level-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/level-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/lightbulb/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/link/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/linkedin-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/linkedin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/linux/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/list-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/list-ol/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/list-ul/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/list/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/location-arrow/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/lock/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/long-arrow-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/long-arrow-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/long-arrow-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/long-arrow-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/magic/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/magnet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/mail-reply-all/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/male/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/map-marker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/maxcdn/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/medkit/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/meh/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/microphone-off/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/microphone/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/minus-sign-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/minus-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/minus/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/mobile-phone/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/money/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/moon/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/move/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/music/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/off/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ok-circle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ok-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ok/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/paper-clip/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/paste/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/pause/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/pencil/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/phone-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/phone/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/picture/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/pinterest-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/pinterest/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/plane/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/play-circle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/play-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/play/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/plus-sign-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/plus-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/plus/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/print/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/pushpin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/puzzle-piece/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/qrcode/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/question-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/question/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/quote-left/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/quote-right/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/random/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/refresh/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/remove-circle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/remove-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/remove/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/renren/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/reorder/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/repeat/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/reply-all/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/reply/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/resize-full/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/resize-horizontal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/resize-small/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/resize-vertical/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/retweet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/road/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/rocket/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/rss-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/rss/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/save/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/screenshot/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/search/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/share-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/share-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/share/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/shield/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/shopping-cart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sign-blank/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/signal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/signin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/signout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sitemap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/skype/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/smile/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-by-alphabet-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-by-alphabet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-by-attributes-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-by-attributes/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-by-order-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-by-order/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sort/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/spinner/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/stackexchange/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/star-empty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/star-half-empty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/star-half/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/star/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/step-backward/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/step-forward/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/stethoscope/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/stop/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/strikethrough/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/subscript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/suitcase/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/sun/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/superscript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/table/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tablet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tag/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tags/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tasks/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/terminal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/text-height/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/text-width/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/th-large/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/th-list/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/th/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/thumbs-down-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/thumbs-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/thumbs-up-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/thumbs-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/ticket/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/time/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tint/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/trash/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/trello/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/trophy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/truck/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tumblr-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/tumblr/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/twitter-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/twitter/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/umbrella/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/underline/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/undo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/unlink/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/unlock-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/unlock/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/upload-alt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/upload/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/usd/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/user-md/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/vk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/volume-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/volume-off/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/volume-up/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/warning-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/weibo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/windows/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/wrench/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/xing-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/xing/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/youtube-play/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/youtube-sign/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/youtube/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/zoom-in/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icon/zoom-out/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icons.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/icons/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/license/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/3.2.1/whats-new/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/CNAME" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/README.md-nobuild" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/accessibility/accessibility-facdn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/accessibility/accessibility-manual.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/accessibility/background.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/accessibility/cta-cdn-ally.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/accessibility/other.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/ads/carbon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/brand-adblock-warning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/brand-license.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/code/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/code/core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/code/license.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/community/getting-support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/community/project-milestones.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/community/reporting-bugs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/community/requesting-new-icons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/community/submitting-pull-requests.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/accessible.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/animated.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/bootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/bordered-pulled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/custom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/fixed-width.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/larger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/rotated-flipped.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/examples/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/accessibility.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/brand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/currency.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/directional.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/file-type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/form-control.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/gender.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/hand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/medical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/spinner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/text-editor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/transportation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/video-player.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/icons/web-application.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/jumbotron-carousel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/jumbotron.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/modals/download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/modals/fa5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/new-features.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/new-naming.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/new-upgrading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/newsletter-subscribe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/camera-retro-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/classics-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/cta-suggestions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/fa-ther-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/green-logo-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/old-skool-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/rock-paper-scissors-lizard-spock-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/space-shuttle-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/products/white-logo-tee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/stripe-ad.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/stripe-social.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tell-me-thanks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tests/rotated-flipped-inside-anchor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tests/rotated-flipped-inside-btn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tests/rotated-flipped.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tests/stacked-inside-anchor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tests/stacked-with-text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/tests/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/thanks-to.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_includes/why.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_layouts/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_layouts/icon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_layouts/survey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_plugins/flatten_icon_filters.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_plugins/icon_page_generator.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/_plugins/site.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/accessibility.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/css/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/css/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/ico/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/img/algolia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/img/logo-themeisle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/img/logo-wpbeginner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/ZeroClipboard-1.1.7.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/ZeroClipboard-1.1.7.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/html5shiv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/monetization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/badges.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/breadcrumbs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/button-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/close.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/component-animations.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/dropdowns.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/glyphicons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/input-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/jumbotron.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/media.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/background-variant.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/border-radius.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/center-block.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/clearfix.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/gradients.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/grid-framework.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/hide-text.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/image.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/nav-divider.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/nav-vertical-align.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/opacity.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/progress-bar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/reset-filter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/reset-text.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/resize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/responsive-visibility.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/size.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/tab-focus.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/table-row.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/text-emphasis.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/text-overflow.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/mixins/vendor-prefixes.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/navs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/pager.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/popovers.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/print.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/progress-bars.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/responsive-embed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/responsive-utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/scaffolding.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/tables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/theme.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/thumbnails.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/bootstrap-3.3.5/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/gandy-grid/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/gandy-grid/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/algolia.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/banner-ad.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/jumbotron.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bootstrap/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/bsap-ad.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/carbon-ad.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/example-rating.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/fa5.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/feature-list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/fontawesome-icon-list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/footer.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/jumbotron-carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/layout.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/lazy.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/newsletter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/print.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/responsive/screen-lg.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/responsive/screen-md.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/responsive/screen-sm-up.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/responsive/screen-sm.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/responsive/screen-xs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/social-buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/store.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/stripe-ad.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/sumome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/textured-bg.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/assets/less/site/views.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/cdn/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/cdn/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/cheatsheet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/community.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/design.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/examples.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/get-started.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/icons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/icons.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/license.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/store.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/survey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/2.3.2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/glyphicons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/height/4.4.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/height/4.5.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/height/current.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/thanks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/Font-Awesome-fa-4/src/whats-new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/bootstrap4.3.1/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/css/hzscroller.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/css/profile_navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/css/solMenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/fonts/arial.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/PixelKit_0022_49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/PixelKit_0023_48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/add-image-100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/add-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/anaSayfa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/ayarlar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/editSmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/esma-i-husna-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/favori.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/ilanlar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/mail-iconSmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/mail1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/pasifSmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/resim-yok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/trashSmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191122-SaltireClouds_ROW0681266067_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191123-QueenVictoriaAgave_ROW1062221797_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191124-AtchafalayaCypress_ROW2692536813_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191129-AspenHiking_ROW1777001057_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191130-MarrakechMarket_ROW1860332133_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191201-HalleyVI_ROW2017180783_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191202-PortlandDawn_ROW2149590048_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191203-PuffinSharing_ROW2232970320_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191204-RhinosOxpecker_ROW2317776285_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191205-CanadaTreeFarm_ROW2445133102_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/welcome_resimleri/20191206-NambungPinnacles_ROW7333773742_1366x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/yayindaSmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/çıkış.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/jquery2.2.5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/jquery3.2.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/jquery3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/smart-selects/admin/js/bindfields.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/smart-selects/admin/js/chainedfk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/smart-selects/admin/js/chainedm2m.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_mesajlar_mesaj_metni.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20191207_1433.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20191207_1435.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_auto_20191208_0934.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0006_ilan_yayinda.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0007_auto_20191215_0843.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0008_geciciresimler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0009_auto_20191217_1852.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0010_geciciresim_kayitli.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0011_geciciresim_silinecek.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0012_auto_20191217_2205.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0013_ilan_tarih.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0014_auto_20191226_2329.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0015_geciciresim_kucukresim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0016_auto_20191227_0954.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0017_auto_20191227_0954.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0018_auto_20191227_0955.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0019_auto_20191231_0041.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0020_auto_20191231_1417.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0021_auto_20200101_0202.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kamu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kamu/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kamu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kamu/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/thumbs/büromasa_thumb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/anasayfa.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/anasayfa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bilgiler.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bilgiler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ilanDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ilanDetay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ilanlarim.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ilanlarim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/base1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/base1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/malzemeKarti.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/malzemeKarti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/profil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/sifreunuttum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/tabprofil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ilan_inceleme.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ilan_inceleme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/mesajNavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/mesajNavBar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/slide.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yapılacaklar" beforeDir="false" afterPath="$PROJECT_DIR$/yapılacaklar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mesajlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mesajlar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +1097,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Enes Serkan Güleç" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -210,28 +1127,32 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templatetags" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/app/templatetags" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates/includes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/silindi" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/app/templatetags" />
       <recent name="$PROJECT_DIR$/app/static/bootstrap4.3.1" />
-      <recent name="$PROJECT_DIR$/app/static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templatetags" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates/includes" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.kamu">
+    <configuration name="malzemeKarti.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/kamu/templates/includes/malzemeKarti.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="kamu" type="Python.DjangoServer" factoryName="Django server">
       <module name="kamu" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,6 +1177,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.malzemeKarti.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -309,7 +1235,8 @@
       <workItem from="1579156817030" duration="22193000" />
       <workItem from="1579436889202" duration="11841000" />
       <workItem from="1579559873927" duration="32413000" />
-      <workItem from="1580312365035" duration="238000" />
+      <workItem from="1580312365035" duration="7075000" />
+      <workItem from="1580343584990" duration="50299000" />
     </task>
     <servers />
   </component>
@@ -333,10 +1260,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="106" y="42" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576915176974">
+    <state x="251" y="45" width="800" height="684" key="#Web_Browsers" timestamp="1580681724694">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state x="251" y="45" width="800" height="684" key="#Web_Browsers/0.0.1312.768@0.0.1312.768" timestamp="1580681724694" />
+    <state x="241" y="58" width="873" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580493938412">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="106" y="42" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1296.768@0.0.1296.768" timestamp="1576915176974" />
+    <state x="241" y="58" width="873" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1296.768@0.0.1296.768" timestamp="1580493938412" />
     <state x="188" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579080032181">
       <screen x="0" y="0" width="1312" height="768" />
     </state>
@@ -351,70 +1282,90 @@
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="406" y="87" key="#xdebugger.evaluate/0.0.1296.768@0.0.1296.768" timestamp="1579704997076" />
-    <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2" timestamp="1577210616746">
+    <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2" timestamp="1580802904284">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2/0.0.1296.768@0.0.1296.768" timestamp="1577210616746" />
-    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1578472681666">
+    <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2/0.0.1296.768@0.0.1296.768" timestamp="1580802904284" />
+    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1580770460766">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="956" height="466" key="DebuggerActiveHint/0.0.1296.768@0.0.1296.768" timestamp="1578472681666" />
-    <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog" timestamp="1576785210147">
+    <state width="956" height="466" key="DebuggerActiveHint/0.0.1296.768@0.0.1296.768" timestamp="1580770460766" />
+    <state x="120" y="62" width="1036" height="651" key="DiffContextDialog" timestamp="1580802868242">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog/0.0.1296.768@0.0.1296.768" timestamp="1576785210147" />
-    <state width="1250" height="258" key="GridCell.Tab.0.bottom" timestamp="1580306234401">
+    <state x="120" y="62" width="1036" height="651" key="DiffContextDialog/0.0.1296.768@0.0.1296.768" timestamp="1580802868242" />
+    <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog" timestamp="1580493876280">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580306234401" />
-    <state width="1266" height="269" key="GridCell.Tab.0.bottom/0.0.1312.768@0.0.1312.768" timestamp="1579173092441" />
+    <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog/0.0.1296.768@0.0.1296.768" timestamp="1580493876280" />
+    <state width="1250" height="258" key="GridCell.Tab.0.bottom" timestamp="1580771415940">
+      <screen x="0" y="0" width="1296" height="768" />
+    </state>
+    <state width="1250" height="258" key="GridCell.Tab.0.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580771415940" />
+    <state width="1250" height="258" key="GridCell.Tab.0.bottom/0.0.1312.768@0.0.1312.768" timestamp="1580682236719" />
     <state width="1250" height="225" key="GridCell.Tab.0.bottom/0.0.2656.768@0.0.2656.768" timestamp="1576953020273" />
-    <state width="1250" height="258" key="GridCell.Tab.0.center" timestamp="1580306234401">
+    <state width="1250" height="258" key="GridCell.Tab.0.center" timestamp="1580771415939">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.center/0.0.1296.768@0.0.1296.768" timestamp="1580306234401" />
-    <state width="1266" height="269" key="GridCell.Tab.0.center/0.0.1312.768@0.0.1312.768" timestamp="1579173092440" />
+    <state width="1250" height="258" key="GridCell.Tab.0.center/0.0.1296.768@0.0.1296.768" timestamp="1580771415939" />
+    <state width="1250" height="258" key="GridCell.Tab.0.center/0.0.1312.768@0.0.1312.768" timestamp="1580682236718" />
     <state width="1250" height="225" key="GridCell.Tab.0.center/0.0.2656.768@0.0.2656.768" timestamp="1576953020272" />
-    <state width="1250" height="258" key="GridCell.Tab.0.left" timestamp="1580306234400">
+    <state width="1250" height="258" key="GridCell.Tab.0.left" timestamp="1580771415939">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.left/0.0.1296.768@0.0.1296.768" timestamp="1580306234400" />
-    <state width="1266" height="269" key="GridCell.Tab.0.left/0.0.1312.768@0.0.1312.768" timestamp="1579173092440" />
+    <state width="1250" height="258" key="GridCell.Tab.0.left/0.0.1296.768@0.0.1296.768" timestamp="1580771415939" />
+    <state width="1250" height="258" key="GridCell.Tab.0.left/0.0.1312.768@0.0.1312.768" timestamp="1580682236718" />
     <state width="1250" height="225" key="GridCell.Tab.0.left/0.0.2656.768@0.0.2656.768" timestamp="1576953020272" />
-    <state width="1250" height="258" key="GridCell.Tab.0.right" timestamp="1580306234401">
+    <state width="1250" height="258" key="GridCell.Tab.0.right" timestamp="1580771415940">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.right/0.0.1296.768@0.0.1296.768" timestamp="1580306234401" />
-    <state width="1266" height="269" key="GridCell.Tab.0.right/0.0.1312.768@0.0.1312.768" timestamp="1579173092441" />
+    <state width="1250" height="258" key="GridCell.Tab.0.right/0.0.1296.768@0.0.1296.768" timestamp="1580771415940" />
+    <state width="1250" height="258" key="GridCell.Tab.0.right/0.0.1312.768@0.0.1312.768" timestamp="1580682236719" />
     <state width="1250" height="225" key="GridCell.Tab.0.right/0.0.2656.768@0.0.2656.768" timestamp="1576953020273" />
-    <state width="1250" height="192" key="GridCell.Tab.1.bottom" timestamp="1580247874462">
+    <state width="1250" height="192" key="GridCell.Tab.1.bottom" timestamp="1580770818782">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580247874462" />
-    <state width="1266" height="269" key="GridCell.Tab.1.bottom/0.0.1312.768@0.0.1312.768" timestamp="1579173119414" />
+    <state width="1250" height="192" key="GridCell.Tab.1.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580770818782" />
+    <state width="1266" height="192" key="GridCell.Tab.1.bottom/0.0.1312.768@0.0.1312.768" timestamp="1580681985543" />
     <state width="1250" height="225" key="GridCell.Tab.1.bottom/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state width="1250" height="192" key="GridCell.Tab.1.center" timestamp="1580247874461">
+    <state width="1250" height="192" key="GridCell.Tab.1.center" timestamp="1580770818781">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.center/0.0.1296.768@0.0.1296.768" timestamp="1580247874461" />
-    <state width="1266" height="269" key="GridCell.Tab.1.center/0.0.1312.768@0.0.1312.768" timestamp="1579173119413" />
+    <state width="1250" height="192" key="GridCell.Tab.1.center/0.0.1296.768@0.0.1296.768" timestamp="1580770818781" />
+    <state width="1266" height="192" key="GridCell.Tab.1.center/0.0.1312.768@0.0.1312.768" timestamp="1580681985542" />
     <state width="1250" height="225" key="GridCell.Tab.1.center/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state width="1250" height="192" key="GridCell.Tab.1.left" timestamp="1580247874461">
+    <state width="1250" height="192" key="GridCell.Tab.1.left" timestamp="1580770818781">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.left/0.0.1296.768@0.0.1296.768" timestamp="1580247874461" />
-    <state width="1266" height="269" key="GridCell.Tab.1.left/0.0.1312.768@0.0.1312.768" timestamp="1579173119413" />
+    <state width="1250" height="192" key="GridCell.Tab.1.left/0.0.1296.768@0.0.1296.768" timestamp="1580770818781" />
+    <state width="1266" height="192" key="GridCell.Tab.1.left/0.0.1312.768@0.0.1312.768" timestamp="1580681985542" />
     <state width="1250" height="225" key="GridCell.Tab.1.left/0.0.2656.768@0.0.2656.768" timestamp="1576953027546" />
-    <state width="1250" height="192" key="GridCell.Tab.1.right" timestamp="1580247874462">
+    <state width="1250" height="192" key="GridCell.Tab.1.right" timestamp="1580770818782">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.right/0.0.1296.768@0.0.1296.768" timestamp="1580247874462" />
-    <state width="1266" height="269" key="GridCell.Tab.1.right/0.0.1312.768@0.0.1312.768" timestamp="1579173119413" />
+    <state width="1250" height="192" key="GridCell.Tab.1.right/0.0.1296.768@0.0.1296.768" timestamp="1580770818782" />
+    <state width="1266" height="192" key="GridCell.Tab.1.right/0.0.1312.768@0.0.1312.768" timestamp="1580681985543" />
     <state width="1250" height="225" key="GridCell.Tab.1.right/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state x="223" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1579648368375">
+    <state width="1266" height="192" key="GridCell.Tab.2.bottom" timestamp="1580681748092">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state width="1266" height="192" key="GridCell.Tab.2.bottom/0.0.1312.768@0.0.1312.768" timestamp="1580681748092" />
+    <state width="1266" height="192" key="GridCell.Tab.2.center" timestamp="1580681748091">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state width="1266" height="192" key="GridCell.Tab.2.center/0.0.1312.768@0.0.1312.768" timestamp="1580681748091" />
+    <state width="1266" height="192" key="GridCell.Tab.2.left" timestamp="1580681748091">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state width="1266" height="192" key="GridCell.Tab.2.left/0.0.1312.768@0.0.1312.768" timestamp="1580681748091" />
+    <state width="1266" height="192" key="GridCell.Tab.2.right" timestamp="1580681748091">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state width="1266" height="192" key="GridCell.Tab.2.right/0.0.1312.768@0.0.1312.768" timestamp="1580681748091" />
+    <state x="223" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1580493627638">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="223" y="31" width="1022" height="737" key="SettingsEditor/0.0.1296.768@0.0.1296.768" timestamp="1579648368375" />
+    <state x="223" y="31" width="1022" height="737" key="SettingsEditor/0.0.1296.768@0.0.1296.768" timestamp="1580493627638" />
     <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1577046900036">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
@@ -428,10 +1379,10 @@
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="233" y="0" width="818" height="768" key="com.intellij.database.run.actions.ShowCsvFormatsAction$ForExport/0.0.1296.768@0.0.1296.768" timestamp="1576823537154" />
-    <state x="305" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1580312366676">
+    <state x="305" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1580343589624">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="305" y="211" key="com.intellij.ide.util.TipDialog/0.0.1296.768@0.0.1296.768" timestamp="1580312366676" />
+    <state x="305" y="211" key="com.intellij.ide.util.TipDialog/0.0.1296.768@0.0.1296.768" timestamp="1580343589624" />
     <state x="301" y="0" width="683" height="768" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577902731417">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
@@ -440,10 +1391,10 @@
       <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="135" y="110" width="920" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1312.768@0.0.1312.768" timestamp="1579079967122" />
-    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup" timestamp="1579650114478">
+    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup" timestamp="1580493643845">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup/0.0.1296.768@0.0.1296.768" timestamp="1579650114478" />
+    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup/0.0.1296.768@0.0.1296.768" timestamp="1580493643845" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -453,10 +1404,20 @@
           <line>10</line>
           <option name="timeStamp" value="117" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/mesajlar.html</url>
+          <line>65</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>182</line>
-          <option name="timeStamp" value="134" />
+          <url>file://$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="164" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
