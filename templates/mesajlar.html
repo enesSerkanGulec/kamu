@@ -1,113 +1,100 @@
 {% extends 'includes/base.html' %}
 {% load mesajlarFilitre_islemleri %}
+{% load static %}
 {% block navbar %}
     {% include 'includes/navbar.html' with islem=islem %}
+    <div class="row fixed-top offset-lg-4 offset-md-3"
+         style="margin-top: 80px;"> {% include 'includes/mesajNavBar.html' with f=filtre %}</div>
 {% endblock %}
+{#    <link rel="stylesheet" href="{% static 'css/tablo.css' %}">#}
+
 {% block body %}
     <form method="post">
-    {% csrf_token %}
+        {% csrf_token %}
         <div class="container">
-            <div class="row">
-                <div class="col align-self-center">
-                    {% include 'includes/mesajNavBar.html' with f=filtre %}
-                </div>
-
-            </div>
+            {#            <div class="row fixed-top-2">#}
+            {#                <div class="col align-self-center">#}
+            {#                    #}
+            {#                </div>#}
+            {##}
+            {#            </div>#}
             <div class="row">
                 {% if mesajlar %}
                     <div class="col align-self-center">
-                        <table class="table table-hover">
+                        <table class="table" style="font-size: small">
                             <thead>
-                                <tr>
-                                    <th scope="col">Tarih</th>
-                                    <th scope="col">Gönderen</th>
-                                    <th scope="col">Mesaj</th>
-                                    <th scope="col">Gönderilen</th>
-                                    <th scope="col">İlan</th>
-                                    <th scope="col">Sil</th>
-                                </tr>
+                            <tr>
+                                <th scope="col">Durum</th>
+                                <th scope="col">Tarih</th>
+                                <th scope="col">Muhatap</th>
+                                <th scope="col">Mesaj</th>
+                                <th scope="col">İlan</th>
+                                <th scope="col">Sil</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                {% for mesaj in mesajlar %}
-                                    <tr {% if not mesaj.okundu %}bgcolor="#98fb98"{% endif %}>
-                                        <th scope="row" title="{{ mesaj.tarih|date:"H:i" }}">{{ mesaj.tarih|date:"d.m.Y" }}</th>
-                                        <td>
-                                            {% if 'gonderen;'|birlestir:user.id|mesajSahisGetir:mesaj|deger_ben_degil %}
-                                                <a href="#" class="dropdown" id="dropdowngonderen{{ mesaj.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {{ 'gonderen;'|birlestir:user.id|mesajSahisGetir:mesaj|truncatechars:20 }}
-                                                    <div class="dropdown-menu" aria-labelledby="dropdowngonderen{{ mesaj.id }}">
-                                                        <a class="dropdown-item" href="#">Kuruma mesaj gönder</a>
-                                                        <a class="dropdown-item" href="#">Bu kurumdan gelenleri göster</a>
-                                                    </div>
-                                                </a>
-                                            {% else %}
-                                                Ben
-                                            {% endif %}
-                                        </td>
-                                        <td>
-                                            <a href="#" class="card-link" data-toggle="modal" data-target="#modal{{ mesaj.id }}">
-                                                {{ mesaj.mesaj_metni|truncatechars:30 }}
-                                            </a>
-                                        </td>
-                                        <td>
-                                            {% if 'gonderilen;'|birlestir:user.id|mesajSahisGetir:mesaj|deger_ben_degil %}
-                                                <a href="#" class="dropdown" id="dropdowngonderilen{{ mesaj.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {{ 'gonderilen;'|birlestir:user.id|mesajSahisGetir:mesaj|truncatechars:20 }}
-                                                    <div class="dropdown-menu" aria-labelledby="dropdowngonderilen{{ mesaj.id }}">
-                                                        <a class="dropdown-item" href="#">Kuruma mesaj gönder</a>
-                                                        <a class="dropdown-item" href="#">Bu kurumdan gelenleri göster</a>
-                                                    </div>
-                                                </a>
-                                            {% else %}
-                                                Ben
-                                            {% endif %}
-                                        </td>
-                                        <td>
-                                            {% if mesaj.ilgili_ilan %}
-                                                <a href="#" class="dropdown" id="dropdownilan{{ mesaj.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {{ mesaj.ilgili_ilan.ad|truncatechars:20}}
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownilan{{ mesaj.id }}">
-                                                        <a class="dropdown-item" href="#">Bu ilanı incele</a>
-                                                        <a class="dropdown-item" href="#">Bu ilanla ilgilileri göster</a>
-                                                    </div>
-                                                </a>
-                                            {% endif %}
-                                        </td>
-                                        <td>
-                                            <a href="{% url 'mesajdaislemyap' filtre mesaj.id 'sil' %}" class="card-link" title="Mesajı sil">
-                                                <span class="fa fa-trash" style="color: indianred"></span>
-                                            </a>
-                                        </td>
+                            {% for mesaj in mesajlar %}
+                                <tr onclick="document.location = '{% url 'ilanMesajlari' mesaj.id %}'">
+                                    <th scope="row">{% if mesaj|mesaj_gelen:user.id %}{% if mesaj.okundu %}
+                                        <span class="badge badge-success">Okundu</span>{% else %}
+                                        <span class="badge badge-danger">Okunmadı</span>{% endif %}{% else %}
+                                    {% if mesaj.okundu %} <span class="badge badge-success">Okudu</span>{% else %}
+                                        <span class="badge badge-danger">Okumadı</span>{% endif %}{% endif %}</th>
+                                    <td>
+                                        {{ mesaj.tarih|date:"d.m.Y" }}
+                                    </td>
+                                    <td>
+                                        {{ mesaj|mesajSahisGetir:user.id|truncatechars:25 }}
+                                    </td>
+                                    <td>
+                                        {% if mesaj|mesaj_gelen:user.id %}
+                                            <span class="badge badge-warning">Gelen</span>{% else %}
+                                            <span class="badge badge-secondary">Giden</span>{% endif %}  {{ mesaj.mesaj_metni|truncatechars:30 }}
+                                    </td>
+                                    <td>
+                                        {{ mesaj.ilgili_ilan.ad|truncatechars:20 }}
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'mesajdaislemyap' filtre mesaj.id 'sil' %}" class="card-link"
+                                           title="Mesajı sil">
+                                            <span class="fa fa-trash" style="color: indianred"></span>
+                                        </a>
+                                    </td>
 
-                                    </tr>
+                                </tr>
 
-                                    <div class="modal fade text-left" id="modal{{ mesaj.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Mesaj Ayrıntı..</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
+                                <div class="modal fade text-left" id="modal{{ mesaj.id }}" tabindex="-1" role="dialog"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Mesaj Ayrıntı..</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
 
-                                                <div class="modal-body">
-                                                    {{ mesaj.mesaj_metni }}
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-    {#                                                <button type="submit" class="btn btn-primary" name="mesaj" value="{% if islem == 'favorilerim' %}{{ f.ilan.id }}{% elif islem == 'anasayfa' %}{{ f.id }}{% endif %}">Mesaj gönder</button>#}
-                                                </div>
+                                            <div class="modal-body">
+                                                {{ mesaj.mesaj_metni }}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Kapat
+                                                </button>
+                                                {#                                                <button type="submit" class="btn btn-primary" name="mesaj" value="{% if islem == 'favorilerim' %}{{ f.ilan.id }}{% elif islem == 'anasayfa' %}{{ f.id }}{% endif %}">Mesaj gönder</button>#}
                                             </div>
                                         </div>
                                     </div>
-                                {% endfor %}
+                                </div>
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
-
                 {% else %}
-                    <div class="col alert-danger d-block text-center" style="font-size: x-large">Henüz görüntülenecek mesajınız yok</div>
+                    <div class="col alert-danger d-block text-center" style="font-size: x-large">Henüz görüntülenecek
+                        mesajınız yok
+                    </div>
                 {% endif %}
             </div>
         </div>

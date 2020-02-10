@@ -43,30 +43,40 @@ def degerGetir(filitre, hangisini):
     return x
 
 @register.filter
-def mesajSahisGetir(islem, mesaj):
-    x = islem.split(';')
-    if x[0] == 'gonderen':
-        s = mesaj.gonderenKim(int(x[1]))
-        return s
-    elif x[0] == 'gonderilen':
-        s = mesaj.gonderilenKim(int(x[1]))
+def mesajSahisGetir(mesaj, user_id):
+    s = mesaj.gonderenKim(user_id)
+    if s != 'Ben':
         return s
     else:
-        return ''
+        return mesaj.gonderilenKim(user_id)
 
 
 @register.filter
-def birlestir(str1, str2):
-    return str(str1) + str(str2)
+def mesajGelenMi(mesaj, user_id):
+    return mesaj.gonderilen_id == user_id
 
 
 @register.filter
-def deger_ben_degil(deger):
-    return deger != 'Ben'
+def mesajSahisBilgileriGetir(mesaj, user_id):
+    s = mesajSahisGetir(mesaj,user_id)
+
+@register.filter
+def mesaj_gelen(mesaj, user_id):
+    return mesaj.gonderilenKim(user_id) == 'Ben'
 
 
-@register.filter()
-def mesajOkundu_yap(mesaj):
-    mesaj.okundu = True
-    mesaj.save()
-    return None
+# @register.filter
+# def birlestir(str1, str2):
+#     return str(str1) + str(str2)
+
+
+# @register.filter
+# def deger_ben_degil(deger):
+#     return deger != 'Ben'
+#
+#
+# @register.filter()
+# def mesajOkundu_yap(mesaj):
+#     mesaj.okundu = True
+#     mesaj.save()
+#     return None

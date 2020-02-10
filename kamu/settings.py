@@ -140,6 +140,4 @@ EMAIL_FROM = 'enesgulec@gmail.com'
 
 THUMB_SIZE = (200, 200)
 
-# JQUERY_URL = True
-# USE_DJANGO_JQUERY = False
 

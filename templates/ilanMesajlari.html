@@ -1,0 +1,118 @@
+k{% extends 'includes/base.html' %}
+{% load mesajlarFilitre_islemleri %}
+{% load define_action %}
+{% load crispy_forms_tags %}
+{% block navbar %}
+    {% include 'includes/navbar.html' with islem=islem %}
+{% endblock %}
+{% block sayfaRengi %}
+    style="background-color: lightsteelblue"
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col alert-danger d-block text-center">
+            {% include 'includes/messages.html' %}
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col col-lg-6 col-md-6">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <img src="
+
+
+                            {% if ilann.yayindami %}{{ ilann.ilk_resim_getir.resim.url }}{% else %}{{ ilann.kucuk_resim.url }}{% endif %}"
+                         class=" img-fluid d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="row">
+                        <div class="col text-left">
+                            <h3>{{ muhatap.kurum }} <span
+                                    style="font-size: x-small">  {{ muhatap.kurum_il }}/{{ muhatap.kurum_ilce }}</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-left">
+                            <h4>{{ ilann.ad }} <span style="font-size: x-small">  {{ ilann.kategori }}</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6 col-md-6">
+            <div class="row">
+                <div class="col col-lg-9 col-md-9">
+                    {{ yeniMesaj|crispy }}
+                </div>
+                <div class="col col-lg-3 col-md-3">
+                    <form method="post">
+                        {% csrf_token %}
+                        <button class="btn-block btn-success rounded h-75" type="submit" name="btn" value="gonder">
+                            Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {#            <div class="col col-lg-1 col-md-2 col-sm-4">#}
+    {#                <img src="#}
+    {#                        {% if ilann.yayindami %}{{ ilann.ilk_resim_getir.resim.url }}{% else %}{{ ilann.kucuk_resim.url }}{% endif %}"#}
+    {#                     class="img-fluid d-block w-100" alt="...">#}
+    {#            </div>#}
+    {#            <div class="col col-lg-5 col-md-5 col-sm-8 alert-dark d-block text-right rounded mx-2">#}
+    {#                <h5>{{ ilann.ad }}</h5>#}
+    {#                {{ ilann.kategori }}#}
+    {#            </div>#}
+    {#            <div class="col col-lg-5 col-md-5 alert-dark d-block text-left rounded mx-2">#}
+    {#                <h3>{{ muhatap.kurum }}</h3>#}
+    {#                <h5>{{ muhatap.kurum_ilce }} - {{ muhatap.kurum_il }}</h5>#}
+    {#            </div>#}
+
+
+
+
+    <form>
+        {% csrf_token %}
+        {% define "Bismillah" as t %}
+        {% for mesaj in mesajlar %}
+            {% if t != mesaj.tarih|timesince %}
+                {% define mesaj.tarih|timesince as t %}
+                <div class="row justify-content-center">
+                    <div class="badge badge-primary">
+                        {{ t }} önce
+                    </div>
+                </div>
+            {% endif %}
+            {% if mesaj|mesajGelenMi:user_id %}
+                <div class="row justify-content-start">
+                    <div class="alert alert-light">
+                        {{ mesaj.mesaj_metni }} <a href="#"><span
+                            class="badge badge-danger align-self-end">Sil</span></a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="row justify-content-end">
+                    <div class="alert alert-success">
+                        {{ mesaj.mesaj_metni }} <a href="#"><span class="badge badge-danger">Sil</span></a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </form>
+    <div class="form-row footer fixed-bottom">
+        <div class="form-group col-md-9 col-lg-9 d-block">
+
+        </div>
+        <div class="form-group col-md-2 col-lg-2 py-3 pt-6 pb-3">
+
+        </div>
+    </div>
+
+{% endblock %}

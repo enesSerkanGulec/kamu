@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71458b19-df85-4972-b36a-dc2b7820becc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/adaptör_1HsBimy.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/büromasa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pcmasa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/saat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sandalye.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/silinenilanlar/thumbs/telsiz1_thumb_o4Vy1Co_laMevcut.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sunta.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/telsiz1_ORo28BE.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/telsiz_yUIhsSa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/adaptör_thumb_95Ayazf.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/büromasa_thumb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/pcmasa_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/saat_thumb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/sandalye_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/sunta_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz1_thumb_9gtMJVB.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/telsiz_thumb_X45tHSP.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/thumbs/öğrencimasa_thumb_FDGlTHo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/öğrencimasa_9KW8QFj.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/define_action.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/tablo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/gelen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/giden.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/staticfiles/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/autocomplete.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/staticfiles/admin/css/base.css" afterDir="false" />
@@ -1029,23 +1013,20 @@
       <change afterPath="$PROJECT_DIR$/staticfiles/smart-selects/admin/js/bindfields.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/staticfiles/smart-selects/admin/js/chainedfk.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/staticfiles/smart-selects/admin/js/chainedm2m.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ilanMesajlari.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kamu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kamu/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kamu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kamu/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/profil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/sifreunuttum.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/tabprofil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Silinecekler/welcome.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ilan_inceleme.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ilan_inceleme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/mesajNavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/mesajNavBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/karsilama.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/karsilama.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mesajlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mesajlar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -1090,9 +1071,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Python Script" />
         <option value="CSS File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -1127,11 +1108,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templatetags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1142,11 +1123,11 @@
       <recent name="$PROJECT_DIR$/app/static/bootstrap4.3.1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/templatetags" />
+      <recent name="$PROJECT_DIR$/static/img" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/app/templatetags" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates/includes" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.kamu">
@@ -1177,6 +1158,10 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.kamu" />
+      <item itemvalue="JavaScript Debug.malzemeKarti.html" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.malzemeKarti.html" />
@@ -1236,12 +1221,34 @@
       <workItem from="1579436889202" duration="11841000" />
       <workItem from="1579559873927" duration="32413000" />
       <workItem from="1580312365035" duration="7075000" />
-      <workItem from="1580343584990" duration="50299000" />
+      <workItem from="1580343584990" duration="78689000" />
+      <workItem from="1580987838485" duration="8735000" />
+      <workItem from="1581186140840" duration="797000" />
+      <workItem from="1581187315990" duration="10655000" />
+      <workItem from="1581276135012" duration="11436000" />
     </task>
+    <task id="LOCAL-00001" summary="cihat hoca ile denedik">
+      <created>1580802906960</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580802906960</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1258,93 +1265,109 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="cihat hoca ile denedik" />
+    <MESSAGE value="mesaj başlık bölümünü yeniden düzenledim" />
+    <option name="LAST_COMMIT_MESSAGE" value="mesaj başlık bölümünü yeniden düzenledim" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="243" y="45" width="800" height="684" key="#Notifications" timestamp="1581186233795">
+      <screen x="0" y="0" width="1296" height="768" />
+    </state>
+    <state x="243" y="45" width="800" height="684" key="#Notifications/0.0.1296.768@0.0.1296.768" timestamp="1581186233795" />
     <state x="251" y="45" width="800" height="684" key="#Web_Browsers" timestamp="1580681724694">
       <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="251" y="45" width="800" height="684" key="#Web_Browsers/0.0.1312.768@0.0.1312.768" timestamp="1580681724694" />
-    <state x="241" y="58" width="873" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580493938412">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="228" y="58" width="873" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581327104876">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="241" y="58" width="873" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1296.768@0.0.1296.768" timestamp="1580493938412" />
+    <state x="228" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1312.768@0.0.1312.768" timestamp="1581327104876" />
     <state x="188" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579080032181">
       <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="186" y="133" width="380" height="516" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1296.768@0.0.1296.768" timestamp="1579077014243" />
     <state x="188" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1312.768@0.0.1312.768" timestamp="1579080032181" />
     <state x="381" y="133" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2656.768@0.0.2656.768" timestamp="1576952349564" />
+    <state x="179" y="213" width="927" height="348" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1580808510756">
+      <screen x="0" y="0" width="1296" height="768" />
+    </state>
+    <state x="179" y="213" width="927" height="348" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1296.768@0.0.1296.768" timestamp="1580808510756" />
     <state x="458" y="140" width="369" height="495" key="#xdebugger.XInspectDialog" timestamp="1579197061762">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="458" y="140" width="369" height="495" key="#xdebugger.XInspectDialog/0.0.1296.768@0.0.1296.768" timestamp="1579197061762" />
-    <state x="406" y="87" key="#xdebugger.evaluate" timestamp="1579704997076">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="411" y="87" key="#xdebugger.evaluate" timestamp="1581195347441">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="406" y="87" key="#xdebugger.evaluate/0.0.1296.768@0.0.1296.768" timestamp="1579704997076" />
-    <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2" timestamp="1580802904284">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="411" y="87" key="#xdebugger.evaluate/0.0.1312.768@0.0.1312.768" timestamp="1581195347441" />
+    <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2" timestamp="1581347389299">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="0" y="0" width="1286" height="768" key="CommitChangelistDialog2/0.0.1296.768@0.0.1296.768" timestamp="1580802904284" />
-    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1580770460766">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1312.768@0.0.1312.768" timestamp="1581347389299" />
+    <state width="968" height="466" key="DebuggerActiveHint" timestamp="1581195849093">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="956" height="466" key="DebuggerActiveHint/0.0.1296.768@0.0.1296.768" timestamp="1580770460766" />
+    <state width="956" height="466" key="DebuggerActiveHint/0.0.1296.768@0.0.1296.768" timestamp="1580884170848" />
+    <state width="968" height="466" key="DebuggerActiveHint/0.0.1312.768@0.0.1312.768" timestamp="1581195849093" />
     <state x="120" y="62" width="1036" height="651" key="DiffContextDialog" timestamp="1580802868242">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="120" y="62" width="1036" height="651" key="DiffContextDialog/0.0.1296.768@0.0.1296.768" timestamp="1580802868242" />
-    <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog" timestamp="1580493876280">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="390" y="144" width="515" height="479" key="EnvironmentVariablesDialog" timestamp="1581327045369">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="385" y="144" width="515" height="486" key="EnvironmentVariablesDialog/0.0.1296.768@0.0.1296.768" timestamp="1580493876280" />
-    <state width="1250" height="258" key="GridCell.Tab.0.bottom" timestamp="1580771415940">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="390" y="144" width="515" height="479" key="EnvironmentVariablesDialog/0.0.1312.768@0.0.1312.768" timestamp="1581327045369" />
+    <state width="1266" height="257" key="GridCell.Tab.0.bottom" timestamp="1581347138933">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580771415940" />
-    <state width="1250" height="258" key="GridCell.Tab.0.bottom/0.0.1312.768@0.0.1312.768" timestamp="1580682236719" />
+    <state width="1250" height="257" key="GridCell.Tab.0.bottom/0.0.1296.768@0.0.1296.768" timestamp="1581277230212" />
+    <state width="1266" height="257" key="GridCell.Tab.0.bottom/0.0.1312.768@0.0.1312.768" timestamp="1581347138933" />
     <state width="1250" height="225" key="GridCell.Tab.0.bottom/0.0.2656.768@0.0.2656.768" timestamp="1576953020273" />
-    <state width="1250" height="258" key="GridCell.Tab.0.center" timestamp="1580771415939">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="257" key="GridCell.Tab.0.center" timestamp="1581347138932">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.center/0.0.1296.768@0.0.1296.768" timestamp="1580771415939" />
-    <state width="1250" height="258" key="GridCell.Tab.0.center/0.0.1312.768@0.0.1312.768" timestamp="1580682236718" />
+    <state width="1250" height="257" key="GridCell.Tab.0.center/0.0.1296.768@0.0.1296.768" timestamp="1581277230212" />
+    <state width="1266" height="257" key="GridCell.Tab.0.center/0.0.1312.768@0.0.1312.768" timestamp="1581347138932" />
     <state width="1250" height="225" key="GridCell.Tab.0.center/0.0.2656.768@0.0.2656.768" timestamp="1576953020272" />
-    <state width="1250" height="258" key="GridCell.Tab.0.left" timestamp="1580771415939">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="257" key="GridCell.Tab.0.left" timestamp="1581347138931">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.left/0.0.1296.768@0.0.1296.768" timestamp="1580771415939" />
-    <state width="1250" height="258" key="GridCell.Tab.0.left/0.0.1312.768@0.0.1312.768" timestamp="1580682236718" />
+    <state width="1250" height="257" key="GridCell.Tab.0.left/0.0.1296.768@0.0.1296.768" timestamp="1581277230211" />
+    <state width="1266" height="257" key="GridCell.Tab.0.left/0.0.1312.768@0.0.1312.768" timestamp="1581347138931" />
     <state width="1250" height="225" key="GridCell.Tab.0.left/0.0.2656.768@0.0.2656.768" timestamp="1576953020272" />
-    <state width="1250" height="258" key="GridCell.Tab.0.right" timestamp="1580771415940">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="257" key="GridCell.Tab.0.right" timestamp="1581347138932">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="258" key="GridCell.Tab.0.right/0.0.1296.768@0.0.1296.768" timestamp="1580771415940" />
-    <state width="1250" height="258" key="GridCell.Tab.0.right/0.0.1312.768@0.0.1312.768" timestamp="1580682236719" />
+    <state width="1250" height="257" key="GridCell.Tab.0.right/0.0.1296.768@0.0.1296.768" timestamp="1581277230212" />
+    <state width="1266" height="257" key="GridCell.Tab.0.right/0.0.1312.768@0.0.1312.768" timestamp="1581347138932" />
     <state width="1250" height="225" key="GridCell.Tab.0.right/0.0.2656.768@0.0.2656.768" timestamp="1576953020273" />
-    <state width="1250" height="192" key="GridCell.Tab.1.bottom" timestamp="1580770818782">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="190" key="GridCell.Tab.1.bottom" timestamp="1581271040074">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.bottom/0.0.1296.768@0.0.1296.768" timestamp="1580770818782" />
-    <state width="1266" height="192" key="GridCell.Tab.1.bottom/0.0.1312.768@0.0.1312.768" timestamp="1580681985543" />
+    <state width="1250" height="190" key="GridCell.Tab.1.bottom/0.0.1296.768@0.0.1296.768" timestamp="1581187733439" />
+    <state width="1266" height="190" key="GridCell.Tab.1.bottom/0.0.1312.768@0.0.1312.768" timestamp="1581271040074" />
     <state width="1250" height="225" key="GridCell.Tab.1.bottom/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state width="1250" height="192" key="GridCell.Tab.1.center" timestamp="1580770818781">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="190" key="GridCell.Tab.1.center" timestamp="1581271040073">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.center/0.0.1296.768@0.0.1296.768" timestamp="1580770818781" />
-    <state width="1266" height="192" key="GridCell.Tab.1.center/0.0.1312.768@0.0.1312.768" timestamp="1580681985542" />
+    <state width="1250" height="190" key="GridCell.Tab.1.center/0.0.1296.768@0.0.1296.768" timestamp="1581187733439" />
+    <state width="1266" height="190" key="GridCell.Tab.1.center/0.0.1312.768@0.0.1312.768" timestamp="1581271040073" />
     <state width="1250" height="225" key="GridCell.Tab.1.center/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
-    <state width="1250" height="192" key="GridCell.Tab.1.left" timestamp="1580770818781">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="190" key="GridCell.Tab.1.left" timestamp="1581271040073">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.left/0.0.1296.768@0.0.1296.768" timestamp="1580770818781" />
-    <state width="1266" height="192" key="GridCell.Tab.1.left/0.0.1312.768@0.0.1312.768" timestamp="1580681985542" />
+    <state width="1250" height="190" key="GridCell.Tab.1.left/0.0.1296.768@0.0.1296.768" timestamp="1581187733438" />
+    <state width="1266" height="190" key="GridCell.Tab.1.left/0.0.1312.768@0.0.1312.768" timestamp="1581271040073" />
     <state width="1250" height="225" key="GridCell.Tab.1.left/0.0.2656.768@0.0.2656.768" timestamp="1576953027546" />
-    <state width="1250" height="192" key="GridCell.Tab.1.right" timestamp="1580770818782">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state width="1266" height="190" key="GridCell.Tab.1.right" timestamp="1581271040074">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state width="1250" height="192" key="GridCell.Tab.1.right/0.0.1296.768@0.0.1296.768" timestamp="1580770818782" />
-    <state width="1266" height="192" key="GridCell.Tab.1.right/0.0.1312.768@0.0.1312.768" timestamp="1580681985543" />
+    <state width="1250" height="190" key="GridCell.Tab.1.right/0.0.1296.768@0.0.1296.768" timestamp="1581187733439" />
+    <state width="1266" height="190" key="GridCell.Tab.1.right/0.0.1312.768@0.0.1312.768" timestamp="1581271040074" />
     <state width="1250" height="225" key="GridCell.Tab.1.right/0.0.2656.768@0.0.2656.768" timestamp="1576953027547" />
     <state width="1266" height="192" key="GridCell.Tab.2.bottom" timestamp="1580681748092">
       <screen x="0" y="0" width="1312" height="768" />
@@ -1362,14 +1385,19 @@
       <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state width="1266" height="192" key="GridCell.Tab.2.right/0.0.1312.768@0.0.1312.768" timestamp="1580681748091" />
-    <state x="223" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1580493627638">
+    <state x="335" y="97" width="622" height="581" key="RollbackChangesDialog" timestamp="1581347330653">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state x="335" y="97" width="622" height="581" key="RollbackChangesDialog/0.0.1312.768@0.0.1312.768" timestamp="1581347330653" />
+    <state x="116" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1581326993013">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state x="115" y="31" width="1022" height="737" key="SettingsEditor/0.0.1296.768@0.0.1296.768" timestamp="1580804976188" />
+    <state x="116" y="31" width="1022" height="737" key="SettingsEditor/0.0.1312.768@0.0.1312.768" timestamp="1581326993013" />
+    <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1580803896620">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="223" y="31" width="1022" height="737" key="SettingsEditor/0.0.1296.768@0.0.1296.768" timestamp="1580493627638" />
-    <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1577046900036">
-      <screen x="0" y="0" width="1296" height="768" />
-    </state>
-    <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2/0.0.1296.768@0.0.1296.768" timestamp="1577046900036" />
+    <state x="243" y="120" width="800" height="535" key="Vcs.Push.Dialog.v2/0.0.1296.768@0.0.1296.768" timestamp="1580803896620" />
     <state x="186" y="192" width="287" height="398" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1579558776316">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
@@ -1379,10 +1407,11 @@
       <screen x="0" y="0" width="1296" height="768" />
     </state>
     <state x="233" y="0" width="818" height="768" key="com.intellij.database.run.actions.ShowCsvFormatsAction$ForExport/0.0.1296.768@0.0.1296.768" timestamp="1576823537154" />
-    <state x="305" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1580343589624">
-      <screen x="0" y="0" width="1296" height="768" />
+    <state x="309" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1581276135221">
+      <screen x="0" y="0" width="1312" height="768" />
     </state>
-    <state x="305" y="211" key="com.intellij.ide.util.TipDialog/0.0.1296.768@0.0.1296.768" timestamp="1580343589624" />
+    <state x="305" y="211" key="com.intellij.ide.util.TipDialog/0.0.1296.768@0.0.1296.768" timestamp="1581187318350" />
+    <state x="309" y="211" key="com.intellij.ide.util.TipDialog/0.0.1312.768@0.0.1312.768" timestamp="1581276135221" />
     <state x="301" y="0" width="683" height="768" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577902731417">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
@@ -1391,10 +1420,15 @@
       <screen x="0" y="0" width="1312" height="768" />
     </state>
     <state x="135" y="110" width="920" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1312.768@0.0.1312.768" timestamp="1579079967122" />
-    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup" timestamp="1580493643845">
+    <state x="313" y="177" width="660" height="420" key="git4idea.merge.GitPullDialog" timestamp="1580804286170">
       <screen x="0" y="0" width="1296" height="768" />
     </state>
-    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup/0.0.1296.768@0.0.1296.768" timestamp="1580493643845" />
+    <state x="313" y="177" width="660" height="420" key="git4idea.merge.GitPullDialog/0.0.1296.768@0.0.1296.768" timestamp="1580804286170" />
+    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup" timestamp="1581052987760">
+      <screen x="0" y="0" width="1296" height="768" />
+    </state>
+    <state x="312" y="26" width="672" height="676" key="search.everywhere.popup/0.0.1296.768@0.0.1296.768" timestamp="1581052987760" />
+    <state x="316" y="26" width="681" height="676" key="search.everywhere.popup/0.0.1312.768@0.0.1312.768" timestamp="1580910616157" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1404,20 +1438,15 @@
           <line>10</line>
           <option name="timeStamp" value="117" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/mesajlar.html</url>
-          <line>65</line>
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/templatetags/mesajlarFilitre_islemleri.py</url>
-          <line>64</line>
+          <line>74</line>
           <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/forms.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="179" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

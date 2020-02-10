@@ -14,6 +14,7 @@ from kamu.settings import THUMB_SIZE
 from io import BytesIO
 from smart_selects.db_fields import ChainedForeignKey
 from django.db.models import Q
+from django.db.models.functions import Coalesce
 
 
 class UserManager(BaseUserManager):
@@ -60,19 +61,23 @@ class User(AbstractUser):
     phone_regex = RegexValidator(regex=r'^\+?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{2} ?[0-9]{2}$',
                                  message="Telefon numarası şu şeklillerden biri gibi olmalı: '+9999999999' veya "
                                          "'9999999999' veya '999 9999999' veya '999 999 9999' veya '999 999 99 99'.")
-    kurum_telefon = models.CharField(validators=[phone_regex], max_length=17, null=True, verbose_name='Kurum telefonu')  # validators should be a list
+    kurum_telefon = models.CharField(validators=[phone_regex], max_length=17, null=True,
+                                     verbose_name='Kurum telefonu')  # validators should be a list
     kurum_web_adres = models.URLField(verbose_name='Kurum web adresi', null=True)
     kurum_il = models.ForeignKey('il', on_delete=models.SET_NULL, null=True, blank=False)
-    kurum_ilce = ChainedForeignKey('ilce', chained_field="kurum_il", chained_model_field="ill", show_all=False, auto_choose=True,
+    kurum_ilce = ChainedForeignKey('ilce', chained_field="kurum_il", chained_model_field="ill", show_all=False,
+                                   auto_choose=True,
                                    sort=False, null=True, blank=False)
-    kurum_mahalle = ChainedForeignKey('mahalle', chained_field="kurum_ilce", chained_model_field='ilcee', show_all=False,
-                                    auto_choose=True, sort=False, null=True, blank=False)
+    kurum_mahalle = ChainedForeignKey('mahalle', chained_field="kurum_ilce", chained_model_field='ilcee',
+                                      show_all=False,
+                                      auto_choose=True, sort=False, null=True, blank=False)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = UserManager()
 
     def mesajNavBar_bilgileri_getir(self):
         pass
+
     #     sonuc = list()
     #     i = list(self.ilanlarim())
     #     benimMesajlarim = Mesajlar.objects.filter(gonderen=self) | Mesajlar.objects.filter(ilgili_ilan__in=i)
@@ -126,7 +131,7 @@ class Kategori(models.Model):
     ad = models.CharField(max_length=20, verbose_name='Kategori adı')
 
     class Meta:
-        ordering = ('ust_kategori__ad',  'ad', )
+        ordering = ('ust_kategori__ad', 'ad',)
 
     def __str__(self):
         if self.ust_kategori:
@@ -149,20 +154,24 @@ class ilan(models.Model):
 
     def etiket_yazisi_getir(self):
         if self.silme_tarihi is None:
-            return '<span style="font-weight: bold">' + self.ad + '</span>' + '<br><span style="font-size:smaller">'+self.sahip.kurum + '</span><br>' + '<span style="font-size: xx-small; font-weight: lighter">' + self.sahip.kurum_il.adi + ',' + self.sahip.kurum_ilce.adi + '</span>'
+            return '<span style="font-weight: bold">' + self.ad + '</span>' + '<br><span style="font-size:smaller">' + self.sahip.kurum + '</span><br>' + '<span style="font-size: xx-small; font-weight: lighter">' + self.sahip.kurum_il.adi + ',' + self.sahip.kurum_ilce.adi + '</span>'
         else:
             return self.kurum
 
     def ilan_sahip_bilgisi_getir(self):
         if self.silme_tarihi is None:
             return 'İlan Numarası: {}<br>Kurum: {}<br>Kurum İl/İlçe: {}/{}<br>Kurum Telefon: {}'.format(self.id,
-             self.sahip.kurum, self.sahip.kurum_il, self.sahip.kurum_ilce, self.sahip.kurum_telefon)
+                                                                                                        self.sahip.kurum,
+                                                                                                        self.sahip.kurum_il,
+                                                                                                        self.sahip.kurum_ilce,
+                                                                                                        self.sahip.kurum_telefon)
 
         else:
             return self.kurum
 
     def ilan_bilgisi_getir(self):
-        return 'Kategori: {}<br>İlan Adı: {}<br>Adet: {}<br>Açıklama: {}'.format(self.kategori, self.ad, self.adet, self.aciklama)
+        return 'Kategori: {}<br>İlan Adı: {}<br>Adet: {}<br>Açıklama: {}'.format(self.kategori, self.ad, self.adet,
+                                                                                 self.aciklama)
 
     def favorilerde(self, user):
         try:
@@ -269,6 +278,10 @@ class ilan(models.Model):
         else:
             return None
 
+    def ilk_resim_getir(self):
+        x = Resim.objects.filter(ilan=self).first()
+        return x
+
     def resim_adet(self):
         return Resim.objects.filter(ilan=self).count()
 
@@ -296,7 +309,8 @@ class ilan(models.Model):
             return "Bu resim zaten mevcut"
 
     def mesajlar(self):
-        return Mesaj.objects.filter(ilgili_ilan=self)
+        return Mesaj.objects.filter((Q(gonderilen_id=self.sahip.id) & Q(silindi__in=[0, 1])) | (
+                    Q(gonderen_id=self.sahip.id) & Q(silindi__in=[0, 2])))
 
     # def save(self, *args, **kwargs):
     #     Resim.objects.filter(ilan=self, silinecek=True).delete()
@@ -361,13 +375,14 @@ class Resim(models.Model):
 
 class KayitBekleyenler(models.Model):
     # _('email address')
-    email = models.EmailField('Kurum e-posta adresi', unique=True,)
+    email = models.EmailField('Kurum e-posta adresi', unique=True, )
     kurum = models.CharField(max_length=100, verbose_name='Kurum adı', null=True)
     kurum_adres = models.CharField(max_length=200, verbose_name='Kurum adresi', null=True)
     phone_regex = RegexValidator(regex=r'^\+?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{2} ?[0-9]{2}$',
                                  message="Telefon numarası şu şeklillerden biri gibi olmalı: '+9999999999' veya "
                                          "'9999999999' veya '999 9999999' veya '999 999 9999' veya '999 999 99 99'. ")
-    kurum_telefon = models.CharField(validators=[phone_regex], max_length=17, null=True, verbose_name='Kurum telefonu')  # validators should be a list
+    kurum_telefon = models.CharField(validators=[phone_regex], max_length=17, null=True,
+                                     verbose_name='Kurum telefonu')  # validators should be a list
     kurum_web_adres = models.URLField(verbose_name='Kurum web adresi', null=True, blank=True)
     kurum_il = models.ForeignKey('il', on_delete=models.PROTECT, null=True, blank=False)
     kurum_ilce = ChainedForeignKey('ilce', chained_field="kurum_il", chained_model_field="ill", null=True,
@@ -392,11 +407,11 @@ class Mesaj(models.Model):
         return self.ilgili_ilan.ad
 
     def sil(self, user_id):
-        if self.gonderen_id == user_id: #Giden mesaj
+        if self.gonderen_id == user_id:  # Giden mesaj
             if self.silindi in [0, 2]:
                 self.silindi = self.silindi + 1
 
-        if self.gonderilen_id == user_id: #Gelen Mesaj
+        if self.gonderilen_id == user_id:  # Gelen Mesaj
             if self.silindi in [0, 1]:
                 self.silindi = self.silindi + 2
 
@@ -404,7 +419,6 @@ class Mesaj(models.Model):
 
         if self.silindi == 3:
             self.delete()
-
 
     def gonderenKim(self, ben_id):
         if self.gonderen_id == ben_id:
@@ -426,6 +440,15 @@ class Mesaj(models.Model):
             except:
                 return 'Gönderilen Silinmiş'
 
+    def ilanMesajBilgileriGetir(self, ben_id):
+        if self.gonderilen_id == ben_id:
+            muhatap_id = self.gonderen_id
+        else:
+            muhatap_id = self.gonderilen_id
+        return User.objects.get(id=muhatap_id), self.ilgili_ilan, Mesaj.objects.filter(
+            ((Q(gonderilen_id=ben_id) & Q(silindi__in=[0, 1])) | (Q(gonderen_id=ben_id) & Q(silindi__in=[0, 2]))) & Q(
+                ilgili_ilan=self.ilgili_ilan)).order_by(Coalesce('tarih', 'id').desc())
+
     def mesaj_getir(sahip, filtre):
         ilgi = yon = durum = zaman = ""
         x = filtre.split('-')
@@ -434,7 +457,8 @@ class Mesaj(models.Model):
         durum = x[2].split(':')[1]
         zaman = x[3].split(':')[1]
 
-        s = Mesaj.objects.filter((Q(gonderilen_id=sahip.id) & Q(silindi__in=[0, 1])) | (Q(gonderen_id=sahip.id) & Q(silindi__in=[0, 2])))
+        s = Mesaj.objects.filter(
+            (Q(gonderilen_id=sahip.id) & Q(silindi__in=[0, 1])) | (Q(gonderen_id=sahip.id) & Q(silindi__in=[0, 2]))).order_by(Coalesce('tarih', 'id').desc())
 
         if ilgi == 'kurum':
             s = s.filter(ilgili_ilan__isnull=True)
@@ -463,6 +487,7 @@ class Mesaj(models.Model):
             s = s.filter(tarih__range=(bugun_min, buay_max))
 
         return s
+
 
 class favoriler(models.Model):
     sahip = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
@@ -502,7 +527,8 @@ class sikayet_nedenleri(models.Model):
 class sikayet(models.Model):
     kim = models.ForeignKey('User', null=True, on_delete=models.SET_NULL)
     hangi_ilan = models.ForeignKey('ilan', on_delete=models.PROTECT)
-    sikayet_nedeni = models.ForeignKey('sikayet_nedenleri', verbose_name='Şikayet Nedeni', on_delete=models.PROTECT, null=False, blank=False)
+    sikayet_nedeni = models.ForeignKey('sikayet_nedenleri', verbose_name='Şikayet Nedeni', on_delete=models.PROTECT,
+                                       null=False, blank=False)
     aciklama = models.TextField(blank=True, verbose_name='Açıklama')
     tarih = models.DateTimeField(auto_now_add=True)
 

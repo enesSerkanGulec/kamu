@@ -174,13 +174,31 @@ def mesajlarim(request, filitre='ilan:hepsi-yon:hepsi-durum:hepsi-zaman:hepsi', 
     if id:
         if islem == 'sil':
             m = Mesaj.objects.get(id=id)
-            x = m.sil(user_id=request.user.id)
-            # m.save()
-            # if x == 3:
-            #     m.delete()
+            m.sil(user_id=request.user.id)
 
     x = Mesaj.mesaj_getir(request.user, filitre)
     return render(request, 'mesajlar.html', {'islem': 'mesajlar', 'filtre': filitre, 'mesajlar': x, 'user': request.user})
+
+
+@login_required(login_url='girisislemi')
+def ilanMesajlari(request, mesaj_id):
+    m = Mesaj.objects.get(id=mesaj_id)
+    yeniMesajFormu = mesajCevaplaFormu(request.POST or None)
+    if request.method == 'POST':
+        islem = request.POST.get('btn')
+        if islem == 'gonder':
+            x = Mesaj()
+            if m.gonderilen_id == request.user.id:
+                muhatap_id = m.gonderen_id
+            else:
+                muhatap_id = m.gonderilen_id
+            x.gonderilen_id = muhatap_id
+            x.gonderen_id = request.user.id
+            xx = yeniMesajFormu
+            x.mesaj_metni = xx.data.get('mesajmetni')
+            x.save()
+    muhatap, ilann, mesajlar = m.ilanMesajBilgileriGetir(request.user.id)
+    return render(request, 'ilanMesajlari.html', {'muhatap': muhatap, 'ilann': ilann, 'mesajlar': mesajlar, 'secili_mesaj': m, 'user_id': request.user.id, 'yeniMesaj': yeniMesajFormu})
 
 
 @login_required(login_url='girisislemi')

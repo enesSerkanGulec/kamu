@@ -60,14 +60,13 @@ class SifreUnuttumFormu(forms.Form):
 
 
 class BilgilerFormu(forms.ModelForm):
-
     class Meta:
         model = userrr
-        fields = ['email', 'first_name', 'last_name', 'kurum_telefon', 'kurum', 'kurum_il', 'kurum_ilce', 'kurum_mahalle', 'kurum_web_adres']
+        fields = ['email', 'first_name', 'last_name', 'kurum_telefon', 'kurum', 'kurum_il', 'kurum_ilce',
+                  'kurum_mahalle', 'kurum_web_adres']
 
 
 class İlanFormu(forms.ModelForm):
-
     class Meta:
         model = ilan
         widgets = {
@@ -103,7 +102,6 @@ class resimliİlanFormu(İlanFormu):
 
 
 class sikayetFormu(forms.ModelForm):
-
     class Meta:
         model = sikayet
         widgets = {
@@ -113,7 +111,6 @@ class sikayetFormu(forms.ModelForm):
 
 
 class mesajFormu(forms.ModelForm):
-
     class Meta:
         model = Mesaj
         widgets = {
@@ -122,14 +119,17 @@ class mesajFormu(forms.ModelForm):
         fields = ['mesaj_metni']
 
 
+class mesajCevaplaFormu(forms.Form):
+    mesajmetni = forms.CharField(widget=forms.Textarea(attrs={'rows': 1, 'placeholder': 'Mesajınızı buraya yazınız..'}), label='')
 
+    class Meta:
+        fields = ['mesajmetni']
 
-
-
-
-
-
-
+    def clean_mesajmetni(self):
+        if not self.cleaned_data['mesaj_metni']:
+            raise forms.ValidationError("Mesaj boş olamaz !!!")
+        else:
+            return self.cleaned_data['mesaj_metni']
 
     # def __init__(self, gerekli=False, *args, **kwargs):
     #     super().__init__(*args, **kwargs)
@@ -192,27 +192,26 @@ class mesajFormu(forms.ModelForm):
 #     class Meta:
 #         fields = ['resim']
 
-    # class Meta:
-    #     model = Resim
-    #     fields = ('resim', 'ilan')
-    #     exclude = ('ilan',)
+# class Meta:
+#     model = Resim
+#     fields = ('resim', 'ilan')
+#     exclude = ('ilan',)
 
-    # def __init__(self, *args, **kwargs):
-    #     self.ilan = kwargs.pop('hangi_ilan')
-    #     super(ResimFormu, self).__init__(*args, **kwargs)
+# def __init__(self, *args, **kwargs):
+#     self.ilan = kwargs.pop('hangi_ilan')
+#     super(ResimFormu, self).__init__(*args, **kwargs)
 
-    # def clean_resim(self):
-    #     r = self.cleaned_data['resim']
-    #     if r:
-    #         return r
-    #     else:
-    #         raise forms.ValidationError('Resim alanı boş')
+# def clean_resim(self):
+#     r = self.cleaned_data['resim']
+#     if r:
+#         return r
+#     else:
+#         raise forms.ValidationError('Resim alanı boş')
 
 
-    # def save(self, commit=True, *args, **kwargs):
-    #     m = super(ResimFormu, self).save(commit=False, *args, **kwargs)
-    #     m.ilan = hangi_ilan
-    #     if commit:
-    #         m.save()
-    #     return m
-
+# def save(self, commit=True, *args, **kwargs):
+#     m = super(ResimFormu, self).save(commit=False, *args, **kwargs)
+#     m.ilan = hangi_ilan
+#     if commit:
+#         m.save()
+#     return m

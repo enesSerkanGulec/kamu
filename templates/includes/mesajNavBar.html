@@ -1,6 +1,7 @@
 {% load static %}
 {% load mesajlarFilitre_islemleri %}
-<ul class="nav navbar-fixed-top" style="background-color: lightcyan; font-size: small">
+
+<ul class="nav" style="background-color: lightgrey; font-size: small">
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" {% if f|degerGetir:'ilgili' != '' %}style="font-weight: bold;color: darkred"{% endif %} aria-expanded="false">İlgili{{ f|degerGetir:'ilgili' }}</a>
     <div class="dropdown-menu">
