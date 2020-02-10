@@ -534,3 +534,92 @@ class sikayet(models.Model):
 
     def __str__(self):
         return '{}(İlan:{}, Kim:{})'.format(self.sikayet_nedeni, self.hangi_ilan, self.kim)
+
+# -------------------------------------------------------------------------------------------------------
+
+
+
+# Create your models here.
+class Bolum(models.Model):
+    bolum_ad = models.CharField(max_length=50, verbose_name='Bölüm')
+
+    def __str__(self):
+        return self.bolum_ad
+
+    class Meta:
+        ordering = ['bolum_ad']
+
+
+class Sinif(models.Model):
+    sinifin_bolumu = models.ForeignKey(Bolum, on_delete=models.CASCADE)
+    sinif = models.CharField(max_length=20, verbose_name='Sınıf')
+
+    def __str__(self):
+        return self.sinif
+
+    class Meta:
+        ordering = ['sinif']
+
+
+class OgrenciBilgi(models.Model):
+    ogrenci_tc = models.CharField(max_length=11, verbose_name='TC Kimlik Numarası', default='11112222333')
+    ogrenci_no = models.CharField(max_length=5, verbose_name='Öğrenci Numarası', blank=False, null=False)
+    ogrenci_ad = models.CharField(max_length=30, verbose_name='Öğrenci Adı', null=True, blank=False)
+    ogrenci_soyad = models.CharField(max_length=30, verbose_name='Öğrenci Soyadı', null=True, blank=True)
+    veli_isim = models.CharField(max_length=30, verbose_name='Veli Ad Soyad ', null=True, blank=True)
+    veli_telefon = models.CharField(max_length=30, verbose_name='Veli Telefon', null=True, blank=True)
+    veli_eposta = models.CharField(max_length=30, verbose_name='Veli EPosta', null=True, blank=True)
+    ogrenci_tel = models.CharField(max_length=30, verbose_name='Öğrenci Telefon', null=True, blank=True)
+    ogrenci_siniff = models.ForeignKey(Sinif, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.ogrenci_ad
+
+    class Meta:
+        ordering = ['ogrenci_no']
+
+
+class OgretmenBilgi(models.Model):
+    ogretmen_ad = models.CharField(max_length=30, verbose_name='Öğretmen Adı')
+    ogretmen_soyad = models.CharField(max_length=30, verbose_name='Öğretmen Soyadı')
+    ogretmen_brans = models.CharField(max_length=30, verbose_name='Öğretmen Branşı')
+    ogretmen_sifre = models.CharField(max_length=30, verbose_name='Öğretmen Şifresi')
+    ogretmen_eposta = models.CharField(max_length=30, verbose_name='Öğretmen EPosta')
+    ogretmen_rehberlik_sinif = models.ForeignKey(Sinif, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return "{} {}".format(self.ogretmen_ad, self.ogretmen_soyad)
+
+    class Meta:
+        ordering = ['ogretmen_ad']
+
+
+class GorusKonulari(models.Model):
+    gorus_konusu = models.CharField(max_length=30, verbose_name='Görüşün Konusu')
+
+    def __str__(self):
+        return self.gorus_konusu
+
+
+class Gorusler(models.Model):
+    sinif = models.ForeignKey(Sinif, on_delete=models.CASCADE)
+    ogrenci = ChainedForeignKey(OgrenciBilgi, chained_field="sinif", chained_model_field="ogrenci_siniff",
+                                show_all=False, auto_choose=True, sort=False,null=True,blank=True)
+    # ogrenci = models.ForeignKey(OgrenciBilgi, on_delete=models.CASCADE)
+    ogretmen = models.ForeignKey(OgretmenBilgi, on_delete=models.CASCADE)
+    tarih = models.DateTimeField(auto_now_add=True, verbose_name='Görüş Tarihi')
+    konu = models.ForeignKey(GorusKonulari, on_delete=models.CASCADE)
+    olumlu = models.BooleanField()
+    gorus_metni = models.TextField(verbose_name='İçerik')
+
+    def __str__(self):
+        return self.gorus_metni
+
+
+
+
+
+
+
+
+

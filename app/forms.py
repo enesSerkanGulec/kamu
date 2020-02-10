@@ -215,3 +215,24 @@ class mesajCevaplaFormu(forms.Form):
 #     if commit:
 #         m.save()
 #     return m
+
+
+
+
+
+
+#--------------------------------------------------------------------------------------------------------
+
+class GoruslerForm(forms.ModelForm):
+
+    class Meta:
+        model = Gorusler
+        fields = (
+
+            'sinif',
+            'ogrenci',
+            'ogretmen',
+            'konu',
+            'olumlu',
+            'gorus_metni',
+    )

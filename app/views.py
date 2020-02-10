@@ -273,3 +273,11 @@ def il_ilce_veritanamını_aktar(request):
     # file_mahalle.close()
     # messages.success(request, "Veritabanı dolduruldu")
     # return redirect('anasayfaislemi')
+
+
+
+
+def gorusSayfasi(request):
+    x = GoruslerForm(request.POST or None)
+
+    return render(request, 'gorus.html', {'form': x})

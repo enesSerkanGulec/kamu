@@ -102,3 +102,89 @@ admin.site.register(KayitBekleyenler)
 admin.site.register(Mesaj, MesajAdmin)
 admin.site.register(sikayet_nedenleri, SikayetNedenleriAdmin)
 admin.site.register(sikayet, SikayetlerAdmin)
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------
+
+
+
+class BolumAdmin(admin.ModelAdmin):
+    list_display = ['bolum_ad']  # görüntülenen elemanlar
+    list_display_links = ['bolum_ad']  # linkler
+    list_filter = ['bolum_ad']  # filtreleme
+    search_fields = ['bolum_ad']  # arama
+
+    class Meta:
+        model = Bolum
+
+
+admin.site.register(Bolum, BolumAdmin)
+
+
+class SinifAdmin(admin.ModelAdmin):
+    list_display = ['sinif', 'sinifin_bolumu']  # görüntülenen elemanlar
+    list_display_links = ['sinif', 'sinifin_bolumu']  # linkler
+    list_filter = ['sinifin_bolumu']  # filtreleme
+    search_fields = ['sinif', 'sinifin_bolumu']  # arama
+
+    class Meta:
+        model = Sinif
+
+
+admin.site.register(Sinif, SinifAdmin)
+
+
+class OgrenciBilgiAdmin(admin.ModelAdmin):
+    list_display = ['ogrenci_ad', 'ogrenci_soyad', 'ogrenci_no', 'ogrenci_tel']  # görüntülenen elemanlar
+    list_display_links = ['ogrenci_no', 'ogrenci_tel']  # linkler
+    list_filter = ['ogrenci_no', 'ogrenci_tel']  # filtreleme
+    search_fields = ['ogrenci_no', 'ogrenci_tel']
+
+    class Meta:
+        model = OgrenciBilgi
+
+
+admin.site.register(OgrenciBilgi, OgrenciBilgiAdmin)
+
+
+class OgretmenBilgiAdmin(admin.ModelAdmin):
+    list_display = ['ogretmen_ad', 'ogretmen_soyad']  # görüntülenen elemanlar
+    list_display_links = ['ogretmen_ad', 'ogretmen_soyad']  # linkler
+    list_filter = ['ogretmen_brans']  # filtreleme
+    search_fields = ['ogretmen_ad', 'ogretmen_soyad']
+
+    class Meta:
+        model = OgretmenBilgi
+
+
+admin.site.register(OgretmenBilgi, OgretmenBilgiAdmin)
+
+
+class GorusKonulariAdmin(admin.ModelAdmin):
+    list_display = ['gorus_konusu']  # görüntülenen elemanlar
+    list_display_links = ['gorus_konusu']  # linkler
+    list_filter = ['gorus_konusu']  # filtreleme
+    search_fields = ['gorus_konusu']
+
+    class Meta:
+        model = GorusKonulari
+
+
+admin.site.register(GorusKonulari, GorusKonulariAdmin)
+
+
+class GoruslerAdmin(admin.ModelAdmin):
+    list_display = ['ogrenci', 'konu', 'olumlu', 'tarih']  # görüntülenen elemanlar
+    list_display_links = ['ogrenci', 'konu', 'olumlu']  # linkler
+    list_filter = ['konu', 'ogrenci', 'tarih']  # filtreleme
+    search_fields = ['gorus_metni', 'konu', 'ogrenci']
+
+    class Meta:
+        model = Gorusler
+
+
+admin.site.register(Gorusler, GoruslerAdmin)

@@ -42,5 +42,6 @@ urlpatterns = [
     path('mesajlarim/', views.mesajlarim, name='tummesajlarimislemi'),
     path('mesajlarim/<str:filitre>/<int:id>/<str:islem>', views.mesajlarim, name='mesajdaislemyap'),
     path('ilan_mesajlari/<int:mesaj_id>', views.ilanMesajlari, name='ilanMesajlari'),
+    path('gorus/', views.gorusSayfasi),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
